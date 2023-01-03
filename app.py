@@ -24,7 +24,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_categories")
 def get_categories():
-    categories = mongo.db.task.find()
+    categories = mongo.db.categories.find()
     return render_template("categories.html", categories=categories)
 
 
