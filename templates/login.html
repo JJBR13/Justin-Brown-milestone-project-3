@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row p-t">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
+        <div class="card-panel shadow">
+            <div class="row">
+
+                <h3 class="center-align header-text">Login</h3>
+
+                <!-- Gamer ID -->
+                <div class="input-field col s12">
+                    <input id="gamer_id" name="gamer_id" placeholder="Gamer Id" type="text" minlength="5" maxlength="20"
+                        pattern="^[a-zA-Z0-9]{5,15}$" class="validate placeholder-text" required>
+                </div>
+
+                <!-- Password -->
+                <div class="input-field col s12">
+                    <input placeholder="Password" id="password" name="password" type="password" class="validate placeholder-text"  minlength="5" 
+                        required>
+                </div>
+
+                <!-- login btn -->
+                <div class="col s12 center-align">
+                    <button class="btn waves-effect waves-light sub-btn" type="submit" name="action">Login
+                        <i class="fa-solid fa-arrow-right-to-arc right"></i>
+                      </button>
+                </div>
+            </div>
+
+            <!-- link to sign up -->
+            <div class="row">
+                <div class="col s12">
+                    <p class="center-align">
+                        <a href="{{ url_for('register') }}">Need to sign up?</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

@@ -56,6 +56,33 @@ def register():
     return render_template("sign_up.html")
 
 
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        # check gamer id exists
+        existing_gamer = mongo.db.gamer_id.find_one(
+            {"gamer_id": request.form.get("gamer_id").lower()})
+
+        if existing_gamer:
+            # match hash pasword to input password
+            if check_password_hash(
+               existing_gamer["password"], request.form.get("password")):
+                    session["gamer"] = request.form.get("gamer_id").lower()
+                    flash("WELCOME BACK, {}".format(
+                        request.form.get("gamer_id")))
+            else:
+                # incorrect password
+                flash("Incorrect Gamer Id and/or Password")
+                return redirect(url_for("login"))
+
+        else:
+            # incorrect username
+            flash("Incorrect Gamer Id and/or Password")
+            return redirect(url_for("login"))
+
+    return render_template("login.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

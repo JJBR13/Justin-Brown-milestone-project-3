@@ -39,7 +39,7 @@
         <ul class="hide-on-med-and-down">
           <li><a href="{{ url_for('home') }}" class="nav-header">Home</a></li>
           <li><a href="{{ url_for('register') }}" class="nav-header">Sign up</a></li>
-          <li><a href="#" class="nav-header">Sign in</a></li>
+          <li><a href="{{ url_for('login') }}" class="nav-header">Sign in</a></li>
           <li><a href="#" class="nav-header">Contact</a></li>
           <!-- Dropdown Trigger -->
           <li><a class="dropdown-trigger nav-header" href="#!" data-target="dropdown1">Reviews<i
@@ -53,7 +53,7 @@
       <li><a href="{{ url_for('home') }}">Home</a></li>
       <li><a href="#">Reviews</a></li>
       <li><a href="{{ url_for('register') }}">Sign up</a></li>
-      <li><a href="#">Sign in</a></li>
+      <li><a href="{{ url_for('login') }}">Sign in</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </header>
