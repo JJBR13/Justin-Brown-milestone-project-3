@@ -1,10 +1,25 @@
 
+/* ---------------------------------- hero block */
+
+.hero-block {
+    height: 40vh;
+    background: url(../images/banner.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 nav, .page-footer {
     background-color: #5B5C50;
 }
 .card-panel {
-    background-color: #E4DCC0;
+    background-color: #C2AD90;
+    box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1)
+    
 }
+
+/* --------------------------------------- nav bar ul cetnered */
 
 nav.nav-center ul {
     text-align: center;
