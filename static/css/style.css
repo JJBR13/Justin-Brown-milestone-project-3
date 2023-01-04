@@ -1,3 +1,13 @@
+/* Google font Import*/
+
+
+
+/* general css */
+
+.header-text {
+    color: #5B5C50;
+    text-shadow: 2px 2px 5px red;
+}
 
 /* ---------------------------------- hero block */
 
@@ -29,4 +39,17 @@ nav.nav-center ul li {
 }
 nav.nav-center ul li a {
     display: inline-block;
+}
+
+/* ------------------------------------- Submit btn from */
+
+.sub-btn {
+    background-color: #5B5C50;
+    box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sub-btn:hover {
+    background-color: #5B5C50;
+    box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    filter: brightness(130%);
 }

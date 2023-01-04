@@ -2,11 +2,11 @@
 {% block content %}
 
 <div class="row">
-    <form class="col s12 m8 offset-m2">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
         <div class="card-panel">
             <div class="row">
 
-                <h3 class="center-align">Register</h3>
+                <h3 class="center-align header-text">Register</h3>
 
                 <!-- First & Last name -->
                 <div class="input-field col s6">
@@ -24,6 +24,13 @@
                 <!-- Password -->
                 <div class="input-field col s12">
                     <input placeholder="Password" id="password" name="password" type="password" class="validate">
+                </div>
+
+                <!-- Submit btn -->
+                <div class="col s12 center-align">
+                    <button class="btn waves-effect waves-light sub-btn" type="submit" name="action">Submit
+                        <i class="fa-sharp fa-solid fa-paper-plane-top"></i>
+                      </button>
                 </div>
             </div>
     </form>
