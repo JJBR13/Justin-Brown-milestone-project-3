@@ -4,4 +4,5 @@ $(document).ready(function(){
     $(".dropdown-trigger").dropdown({ hover: false });
     console.log('dropdown baby')
     M.updateTextFields();
+    $('.carousel').carousel();
   });

@@ -19,6 +19,10 @@ body {
     padding-top: 2%;
 }
 
+.shadow {
+    box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 /* ---------------------------------- hero block */
 
 .hero-block {
@@ -46,7 +50,6 @@ nav, .page-footer {
 
 .card-panel {
     background-color: #C2AD90;
-    box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* --------------------------------------- nav bar ul cetnered */
@@ -82,4 +85,25 @@ nav.nav-center ul li a {
     padding: 10px;
     background-color: #C2AD90;
     box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* ------------------------------------- Cat carousel */
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.square {
+    height: 200px;
+    width: 200px;
+    background-color: #555;
+  }
+
+.middle {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 200px;
 }

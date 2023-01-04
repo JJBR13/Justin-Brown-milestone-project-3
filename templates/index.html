@@ -1,8 +1,42 @@
 {% extends "base.html" %}
 {% block content %}
 
-        {% for category in categories %}
-            {{ category.category_name }}
-        {% endfor %}
+<!-- filter by Catergories -->
+<section>
+    <div>
+        <h3 class="center-align header-text">Categories</h3>
+    </div>
 
+  <div class="carousel">
+    {% for category in categories %}
+        <a class="carousel-item" href="#one!">
+            <div class="square shadow middle">
+                {{ category.category_name }}
+            </div>
+        </a>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Filter by Console -->
+<section>
+    <div>
+        <h3 class="center-align header-text">Reviews by Devices</h3>
+    </div>
+
+    <div class="row">
+        {% for con in console %}
+        <div class="col s4">
+            <div class="card-panel">
+                <!-- img background-->
+            </div>
+            <div class="center-align">
+                <h4>{{ con.console_type }}</h4>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+      
 {% endblock %}
