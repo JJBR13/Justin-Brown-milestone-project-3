@@ -5,6 +5,7 @@ from flask import (
 from flask_pymongo import PyMongo
 # Allows objects to be taken from DB
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 
 if os.path.exists("env.py"):
     import env
@@ -12,7 +13,7 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
-
+# linking to db
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
@@ -22,10 +23,15 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_categories")
-def get_categories():
+@app.route("/home")
+def home():
     categories = mongo.db.categories.find()
-    return render_template("categories.html", categories=categories)
+    return render_template("index.html", categories=categories)
+
+
+@app.route("/sign_up", methods=["GET", "POST"])
+def register():
+    return render_template("sign_up.html")
 
 
 if __name__ == "__main__":
