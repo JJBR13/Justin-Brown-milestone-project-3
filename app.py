@@ -53,6 +53,7 @@ def register():
         # user into session (cookie)
         session["gamer"] = request.form.get("gamerId").lower()
         flash("Gamer Registration Complete")
+        return redirect(url_for("account", gamer_id=session["user"]))
     return render_template("sign_up.html")
 
 
@@ -70,6 +71,8 @@ def login():
                     session["gamer"] = request.form.get("gamer_id").lower()
                     flash("WELCOME BACK, {}".format(
                         request.form.get("gamer_id")))
+                    return redirect(url_for(
+                        "home", gamer_id=session["gamer"]))
             else:
                 # incorrect password
                 flash("Incorrect Gamer Id and/or Password")
@@ -81,6 +84,14 @@ def login():
             return redirect(url_for("login"))
 
     return render_template("login.html")
+
+
+@app.route("/account/<gamer_id>", methods=["GET", "POST"])
+def account(gamer_id):
+    # getting gamers session gamer_id of db
+    gamer_id = mongo.db.gamer_id.find_one(
+        {"gamer_id": session["gamer"]})["gamer_id"]
+    return render_template("account.html", gamer_id=gamer_id)
 
 
 if __name__ == "__main__":

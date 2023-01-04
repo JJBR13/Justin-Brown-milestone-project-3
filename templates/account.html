@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row p-t">
+    <div class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
+        <div class="row">
+            <h3 class="center-align headdr-text">
+                {{ gamer_id }}
+            </h3>
+        </div>
+    </div>
+
+{% endblock %}
