@@ -37,12 +37,12 @@
       <div class="nav-wrapper">
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-sharp fa-solid fa-bars"></i></a>
         <ul class="hide-on-med-and-down">
-          <li><a href="{{ url_for('home') }}">Home</a></li>
-          <li><a href="{{ url_for('register') }}">Sign up</a></li>
-          <li><a href="#">Sign in</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="{{ url_for('home') }}" class="nav-header">Home</a></li>
+          <li><a href="{{ url_for('register') }}" class="nav-header">Sign up</a></li>
+          <li><a href="#" class="nav-header">Sign in</a></li>
+          <li><a href="#" class="nav-header">Contact</a></li>
           <!-- Dropdown Trigger -->
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Reviews<i
+          <li><a class="dropdown-trigger nav-header" href="#!" data-target="dropdown1">Reviews<i
                 class="fa-solid fa-square-caret-down right"></i></a></li>
         </ul>
       </div>

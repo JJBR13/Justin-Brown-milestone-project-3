@@ -1,12 +1,22 @@
 /* Google font Import*/
 
-
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Syne+Mono&display=swap');
 
 /* general css */
 
+body {
+    font-family: 'Gruppo', cursive;
+    font-size: 18px;
+}
+
 .header-text {
+    font-family: 'Syne Mono', monospace;
     color: #5B5C50;
     text-shadow: 2px 2px 5px red;
+}
+
+.p-t {
+    padding-top: 2%;
 }
 
 /* ---------------------------------- hero block */
@@ -20,9 +30,20 @@
     background-size: cover;
 }
 
+.nav-header {
+    font-size: 22px;
+}
+
+.nav-header:hover {
+    font-size: 22px;
+    background-color: rgba(208, 17, 16, 0.6);
+}
+
+
 nav, .page-footer {
     background-color: #5B5C50;
 }
+
 .card-panel {
     background-color: #C2AD90;
     box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
