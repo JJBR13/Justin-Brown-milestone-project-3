@@ -74,3 +74,12 @@ nav.nav-center ul li a {
     box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     filter: brightness(130%);
 }
+
+/* -------------------------------------- flash messages */ 
+
+.flash-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: #C2AD90;
+    box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

@@ -1,7 +1,7 @@
 import os
 from flask import (
     Flask, render_template,
-    flash, redirect, session, url_for)
+    flash, redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 # Allows objects to be taken from DB
 from bson.objectid import ObjectId
@@ -31,6 +31,26 @@ def home():
 
 @app.route("/sign_up", methods=["GET", "POST"])
 def register():
+    if request.method == "POST":
+        # checking user exits
+        existing_gamer = mongo.db.gamer_id.find_one(
+            {"gamer_id": request.form.get("gamer_id").lower()})
+
+        if existing_gamer:
+            flash("Sorry this gamer Id has been taken")
+            return redirect(url_for("register"))
+
+        register = {
+            "gamer_id": request.form.get("gamer_id").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+
+        # insert user to db
+        mongo.db.gamer_id.insert_one(register)
+
+        # user into session (cookie)
+        session["gamer"] = request.form.get("gamerId").lower()
+        flash("Gamer Registration Complete")
     return render_template("sign_up.html")
 
 

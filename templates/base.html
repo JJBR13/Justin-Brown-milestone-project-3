@@ -58,6 +58,19 @@
     </ul>
   </header>
 
+  <!-- Flash Messages -->
+  <section>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="row flash-container">
+                  {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+  </section>
+
   <main>
     {% block content %}
     {% endblock %}
