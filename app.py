@@ -72,7 +72,7 @@ def login():
                     flash("WELCOME BACK, {}".format(
                         request.form.get("gamer_id")))
                     return redirect(url_for(
-                        "home", gamer_id=session["gamer"]))
+                        "account", gamer_id=session["gamer"]))
             else:
                 # incorrect password
                 flash("Incorrect Gamer Id and/or Password")
@@ -91,7 +91,18 @@ def account(gamer_id):
     # getting gamers session gamer_id of db
     gamer_id = mongo.db.gamer_id.find_one(
         {"gamer_id": session["gamer"]})["gamer_id"]
-    return render_template("account.html", gamer_id=gamer_id)
+
+    if session['gamer']:
+        return render_template("account.html", gamer_id=gamer_id)
+
+    return redirect(url_for("login"))
+
+
+@app.route("/logout")
+def logout():
+    flash("See you soon")
+    session.pop("gamer")
+    return redirect(url_for("home"))
 
 
 if __name__ == "__main__":
