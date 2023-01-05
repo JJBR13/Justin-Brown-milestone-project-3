@@ -28,12 +28,10 @@
     
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content nav-wrapper">
-      <li><a href="" class="nav-header">Account</a></li>
-      <!-- add review -->
+      <li><a href="{{ url_for('account', gamer_id=session['gamer']) }}" class="nav-header">Account</a></li>
+      <li><a href="{{ url_for('add_review') }}" class="nav-header">Add review<i class="fa-solid fa-circle-plus right"></i></a></li>
       <!-- edit review -->
       <li><a href="{{ url_for('logout') }}" class="nav-header">Logout</a></li>
-      <li class="divider"></li>
-      <li><a href="#!">cat_three</a></li>
     </ul>
     <nav id="header-nav" class="nav-center">
       <div class="nav-wrapper">
@@ -41,7 +39,6 @@
         <ul class="hide-on-med-and-down">
           <li><a href="{{ url_for('home') }}" class="nav-header">Home</a></li>
           <li><a href="{{ url_for('import_reviews') }}" class="nav-header">Reviews</a></li>
-          <li><a href="{{ url_for('add_review') }}" class="nav-header">Add review<i class="fa-solid fa-circle-plus right"></i></a></li>
           <li><a href="#" class="nav-header">Contact</a></li>
           {% if session.gamer %}
               <!-- Dropdown Trigger -->
@@ -90,23 +87,30 @@
   <footer class="page-footer">
     <div>
       <div class="row">
-        <div class="col s6">
+        <div class="col s6 center-align">
           <h5 class="white-text">LOGO HERE</h5>
         </div>
 
         <div class="col s6">
           <ul class="right m-r">
-            <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Reviews</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Sign up</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Sign in</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('import_reviews') }}">Reviews</a></li>
+            <li><a href="#">Contact</a></li>
+            {% if session.gamer %}
+              <li><a href="{{ url_for('account', gamer_id=session['gamer']) }}" >Account</a></li>
+              <li><a href="{{ url_for('add_review') }}">Add review</a></li>
+              <!-- edit review -->
+              <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            {% else %}
+              <li><a href="{{ url_for('register') }}">Sign up</a></li>
+              <li><a href="{{ url_for('login') }}">Login</a></li>
+            {% endif %}
           </ul>
         </div>
       </div>
 
       <div class="container center-align">
-        © 2014 Copyright Text
+        <a href="https://github.com/JJBR13?tab=repositories" target="_blank">© 2023 Justin Brown</a>
       </div>
     </div>
   </footer>
