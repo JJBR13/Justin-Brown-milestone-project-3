@@ -78,7 +78,7 @@ nav.nav-center ul li a {
     font-weight: bold;
 }
 
-input[type=text]:not(.browser-default), input[type=password]:not(.browser-default) {
+input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), textarea.materialize-textarea {
     border-bottom: 1px solid red;
 }
 
@@ -147,4 +147,11 @@ nav {
 
 .card-margin {
     margin: 15px;
+}
+
+/* ----------------------------------------- Add_review.html */
+
+#add-panel {
+    background-color: rgba(255,255,255,0);
+    box-shadow: none;
 }

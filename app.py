@@ -113,7 +113,10 @@ def logout():
 
 @app.route("/add_review")
 def add_review():
-    return render_template("add_review.html")
+    console = mongo.db.console.find().sort("console_type", 1)
+    categories = mongo.db.categories.find()
+    return render_template(
+        "add_review.html", console=console, categories=categories)
 
 
 if __name__ == "__main__":
