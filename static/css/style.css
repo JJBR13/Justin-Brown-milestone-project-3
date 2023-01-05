@@ -27,7 +27,15 @@ body {
     box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* ---------------------------------- hero block */
+.no-box-shadow {
+    box-shadow: none;
+}
+
+.card-panel {
+    background-color: #C2AD90;
+}
+
+/* ---------------------------------- hero & header block */
 
 .hero-block {
     height: 40vh;
@@ -52,9 +60,21 @@ body {
     background-color: #5B5C50;
 }
 
-.card-panel {
-    background-color: #C2AD90;
+.dropdown-style {
+    display: block;
+    background-color: rgb(108, 109, 99);
+    width: 160px;
 }
+
+.dropdown-content li>a {
+    font-family: 'Gruppo', cursive;
+    font-size: 16px;
+    color: white;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+
 
 /* --------------------------------------- nav bar ul cetnered */
 
@@ -69,7 +89,10 @@ nav.nav-center ul li a {
     display: inline-block;
 }
 
-/* ------------------------------------- Submit btn from */
+/* -------------------------------------- Footer*/
+
+
+/* ------------------------------------- Submit btn form */
 
 .placeholder-text {
     font-family: 'Gruppo', cursive;
