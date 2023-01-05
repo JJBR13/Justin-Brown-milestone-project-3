@@ -31,6 +31,12 @@ def home():
         "index.html", categories=categories, console=console)
 
 
+@app.route("/import_reviews")
+def import_reviews():
+    reviews = mongo.db.reviews.find()
+    return render_template("reviews.html", reviews=reviews)
+
+
 @app.route("/sign_up", methods=["GET", "POST"])
 def register():
     if request.method == "POST":

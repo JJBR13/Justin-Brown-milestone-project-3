@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <h3 class="center-align header-text">All Reviews</h3>
+</div>
+
+<div class="row center-align card-margin">
+    {% for review in reviews %}
+
+    <!-- Game Name-->
+    <div class="col s6 card-panel shadow">
+        <div class="center-align">
+            <h3 id="r-heading">{{ review.game_name }}</h3>
+        </div>
+
+        <div class="col s4">
+            <!-- img background upoloaded will be here left -->
+        </div>
+
+        <!-- Review content -->
+        <div class="col s8">
+            <nav id="bcrumbs" class="center-align">
+                <div class="col s12 p-b">
+                    <a href="#!" class="breadcrumb">{{ review.console_type }}</a>
+                    <a href="#!" class="breadcrumb">{{ review.category_type }}</a>
+                </div>
+            </nav>
+            <br>
+            {{ review.review_content }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<section class="center-align">
+    <div class="row">
+        {% for review in reviews %}
+        <div class="card-panel">
+            <div class="center-align">
+                <h3 id="r-heading">{{ review.game_name }}</h3>
+            </div>
+            <div class="col s4">
+                <!-- img background upoloaded left -->
+            </div>
+            <!-- Review content -->
+            <div class="col s8">
+                <nav id="bcrumbs" class="center-align">
+                    <div class="col s12 p-b">
+                        <a href="#!" class="breadcrumb">{{ review.console_type }}</a>
+                        <a href="#!" class="breadcrumb">{{ review.category_type }}</a>
+                    </div>
+                </nav>
+                <br>
+                {{ review.review_content }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+</section>
+
+{% endblock %}

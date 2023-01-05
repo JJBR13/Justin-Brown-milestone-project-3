@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Syne+Mono&display=swap');
 
-/* general css */
+/* ------------------------------------------------ general css */
 
 body {
     font-family: 'Gruppo', cursive;
@@ -44,7 +44,7 @@ body {
 }
 
 
-nav, .page-footer {
+#header-nav, .page-footer {
     background-color: #5B5C50;
 }
 
@@ -117,4 +117,30 @@ input[type=text]:not(.browser-default), input[type=password]:not(.browser-defaul
     text-align: center;
     vertical-align: middle;
     line-height: 200px;
+}
+
+/* ---------------------------------------------- Review page */
+
+#r-heading {
+    font-family: 'Syne Mono', monospace;
+    font-size: 20px;
+    text-shadow: 2px 2px 5px red;
+}
+
+nav {
+    background-color: rgba(255,255,255, 0);
+}
+
+#bcrumbs {
+    box-shadow: none;
+}
+
+.breadcrumb {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.7);
+}
+
+.card-margin {
+    margin: 15px;
 }

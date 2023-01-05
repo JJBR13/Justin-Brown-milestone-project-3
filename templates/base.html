@@ -35,12 +35,12 @@
       <li class="divider"></li>
       <li><a href="#!">cat_three</a></li>
     </ul>
-    <nav class="nav-center">
+    <nav id="header-nav" class="nav-center">
       <div class="nav-wrapper">
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-sharp fa-solid fa-bars"></i></a>
         <ul class="hide-on-med-and-down">
           <li><a href="{{ url_for('home') }}" class="nav-header">Home</a></li>
-          <li><a href="#!" class="nav-header">Reviews</a></li>
+          <li><a href="{{ url_for('import_reviews') }}" class="nav-header">Reviews</a></li>
           <li><a href="#" class="nav-header">Contact</a></li>
           {% if session.gamer %}
               <!-- Dropdown Trigger -->
@@ -58,7 +58,7 @@
     <!-- Mobile Navbar -->
     <ul class="sidenav right" id="mobile-demo">
       <li><a href="{{ url_for('home') }}">Home</a></li>
-      <li><a href="#">Reviews</a></li>
+      <li><a href="{{ url_for('import_reviews') }}" class="nav-header">Reviews</a></li>
       <li><a href="{{ url_for('register') }}">Sign up</a></li>
       <li><a href="{{ url_for('login') }}">Login</a></li>
       <li><a href="{{ url_for('logout') }}" class="nav-header">Logout</a></li>
