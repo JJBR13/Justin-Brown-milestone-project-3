@@ -6,19 +6,19 @@
 </div>
 
 <div id="add-panel" class="row card-panel">
-    <form class="col s12" method="POST">
+    <form class="col s12" method="POST" action="{{ url_for('add_review') }}">
 
         <!-- Game Name -->
         <div class="row">
             <div class="input-field col s6">
-                <input placeholder="Game Name" id="game_name" name="game_name" type="text"
+                <input placeholder="Game Name" id="game_name" name="game_name" class="input-bg" type="text"
                     class="placeholder-text validate" required>
             </div>
 
             <!-- console type (dropdown) -->
             <div class="row">
                 <div class="input-field col s12 m6">
-                    <select id="console_type" name="console_type" class="icons validate" required>
+                    <select id="console_type" name="console_type" class="icons placeholder-text validate" required>
                         <option value="" disabled selected>Select Console</option>
                         {% for con in console %}
                             <option value="{{ con.console_type }}" data-icon="images/sample-1.jpg">{{ con.console_type }}</option>
@@ -43,13 +43,19 @@
                 </div>
             </div>
 
-            <!-- Review content-->
-
+            <!-- Review content -->
             <div class="row">
                 <div class="input-field col s12">
                     <textarea id="review_content" name="review_content" placeholder="Type Review Here"
                         class="materialize-textarea placeholder-text"></textarea>
                 </div>
+            </div>
+
+            <!-- Submit btn -->
+            <div class="col s12 center-align">
+                <button class="btn waves-effect waves-light sub-btn" type="submit">
+                    Submit Review
+                </button>
             </div>
 
         </div>

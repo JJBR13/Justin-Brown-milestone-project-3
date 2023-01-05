@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+
 <div>
     <h3 class="center-align header-text">All Reviews</h3>
 </div>
@@ -7,10 +8,16 @@
 <div class="row center-align card-margin">
     {% for review in reviews %}
 
-    <!-- Game Name-->
     <div class="col s6 card-panel shadow">
+
+        <!-- Game Name-->
         <div class="center-align">
             <h3 id="r-heading">{{ review.game_name }}</h3>
+        </div>
+
+        <!-- Review by -->
+        <div class="center-align">
+            <h3 id="gamer-head">{{ review.uploaded_by }}</h3>
         </div>
 
         <div class="col s4">

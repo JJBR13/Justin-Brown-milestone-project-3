@@ -72,7 +72,6 @@ nav.nav-center ul li a {
 /* ------------------------------------- Submit btn from */
 
 .placeholder-text {
-    color: white;
     font-family: 'Gruppo', cursive;
     font-size: 18px;
     font-weight: bold;
@@ -80,6 +79,8 @@ nav.nav-center ul li a {
 
 input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), textarea.materialize-textarea {
     border-bottom: 1px solid red;
+    background-color: #E4DCC0;
+    border-radius: 5px;
 }
 
 .sub-btn {
@@ -154,4 +155,12 @@ nav {
 #add-panel {
     background-color: rgba(255,255,255,0);
     box-shadow: none;
+}
+
+#gamer-head {
+    font-family: 'Gruppo', cursive;
+    font-size: 15px;
+    color: red;
+    text-shadow: 2px 2px 5px #5B5C50;
+    margin: 0;
 }

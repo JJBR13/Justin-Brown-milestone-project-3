@@ -111,8 +111,21 @@ def logout():
     return redirect(url_for("home"))
 
 
-@app.route("/add_review")
+@app.route("/add_review", methods=["GET", "POST"])
 def add_review():
+    if request.method == "POST":
+        review = {
+            "console_type": request.form.get("console_type"),
+            "game_name": request.form.get("game_name"),
+            "category_type": request.form.get("category_type"),
+            "review_content": request.form.get("review_content"),
+            "uploaded_by": session["gamer"]
+        }
+        mongo.db.reviews.insert_one(review)
+        flash("THANK YOU FOR THE REVIEW ON: {}".format(
+            request.form.get("game_name")))
+        return redirect(url_for("home"))
+
     console = mongo.db.console.find().sort("console_type", 1)
     categories = mongo.db.categories.find()
     return render_template(
