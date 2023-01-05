@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div>
+    <h3 class="center-align header-text">Review Now</h3>
+</div>
+
+<div class="row">
+    <form class="col s12">
+
+        <!-- Game Name -->
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+            </div>
+
+            <!-- console type (dropdown) -->
+            <div class="input-field col s12 m6">
+                <select class="icons">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="" data-icon="images/sample-1.jpg">example 1</option>
+                    <option value="" data-icon="images/office.jpg">example 2</option>
+                    <option value="" data-icon="images/yuna.jpg">example 3</option>
+                </select>
+                <label>Images in select</label>
+            </div>
+
+            <!-- Category selector -->
+            <div>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="checkbox" class="filled-in" checked="checked" />
+                            <span>Filled in</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

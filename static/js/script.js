@@ -5,4 +5,5 @@ $(document).ready(function(){
     console.log('dropdown baby')
     M.updateTextFields();
     $('.carousel').carousel();
+    $('select').formSelect();
   });
