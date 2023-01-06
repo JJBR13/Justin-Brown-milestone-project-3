@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div id="modal1" class="modal modal-fixed-footer">
-    <div class="modal-content" method="POST" action="{{ url_for('edit_review', review_id=review._id) }}">
+ <!-- My Reviews -->
+
+ <div class="col s12 m8 offset-m2 p-b" method="POST" action="{{ url_for('login') }}">
+    <h3 class="center-align header-text">Edit Reviews</h3>
+</div>
+
+<div class="row">
+    <div class="card-pannel" method="POST" action="{{ url_for('edit_review', reviews_id=reviews._id) }}">
+
         <!-- Game Name -->
         <div class="row">
             <div class="input-field col s6">
@@ -48,8 +55,8 @@
             </div>
         </div>
     </div>
-    <div class="modal-footer">
-        <a href="" class="btn-small done-btn module-close">Done</a>
+    <div class="modal-footer center">
+        <a href="{ url_for('account') }" class="btn-small done-btn module-close">Done</a>
     </div>
 </div>
 

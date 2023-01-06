@@ -19,6 +19,10 @@ body {
     padding-top: 2%;
 }
 
+.p-b {
+    padding-bottom: 10px;
+}
+
 .m-r {
     margin-right: 2%;
 }

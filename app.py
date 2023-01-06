@@ -134,14 +134,14 @@ def add_review():
         "add_review.html", console=console, categories=categories)
 
 
-@app.route("/edit_review/<review_id>", methods=["GET", "POST"])
-def edit_review(review_id):
-    review = mongo.db.reviews.find_one({"$set": review_id()})
+@app.route("/edit_review/<reviews_id>", methods=["GET", "POST"])
+def edit_review(reviews_id):
+    reviews = mongo.db.reviews.find_one({"_id": ObjectId(reviews_id)})
 
     console = mongo.db.console.find().sort("console_type", 1)
     categories = mongo.db.categories.find()
     return render_template(
-        "edit_review.html", console=console, categories=categories)
+        "edit_review.html", reviews=reviews, console=console, categories=categories)
 
 
 if __name__ == "__main__":
