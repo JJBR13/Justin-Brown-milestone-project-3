@@ -1,13 +1,62 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row p-t">
-    <div class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
-        <div class="row">
-            <h3 class="center-align headdr-text">
-                {{ gamer_id }}
-            </h3>
-        </div>
-    </div>
+<div class="col s12 m8 offset-m2 p-t" method="POST" action="{{ url_for('login') }}">
+    <h3 class="center-align header-text">
+        <i class="fa-solid fa-user"></i>
+        <br>
+        {{ gamer_id }}
+    </h3>
+</div>
 
-{% endblock %}
+<!-- My Reviews -->
+<div class="col s12 m8 offset-m2 p-t" method="POST" action="{{ url_for('login') }}">
+    <h3 class="header-text my-review">My Reviews</h3>
+</div>
+
+<!-- Display Review Template -->
+<div class="row center-align card-margin">
+    {% for review in reviews %}
+
+    <div class="col s12">
+        <div class="card-panel shadow">
+            <!-- Game Name-->
+            <div class="center-align">
+                <h3 id="r-heading">{{ review.game_name }}</h3>
+            </div>
+
+            <!-- Breadcrumbs-->
+            <nav id="bcrumbs" class="center-align">
+                <div class="col s12 p-b">
+                    <a href="#!" class="breadcrumb">{{ review.console_type }}</a>
+                    <a href="#!" class="breadcrumb">{{ review.category_type }}</a>
+                </div>
+            </nav>
+
+            <!--Image -->
+            <div class="row">
+                <div class="col s4">
+                    <!-- img background upoloaded will be here left -->
+                </div>
+
+                <!-- Review content -->
+                <div class="col s8">
+                    {{ review.review_content }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row center-align">
+            <div class="col s12 l2">
+            </div>
+            <div class="col s12 l8">
+                <hr>
+            </div>
+            <div class="col s12 l2">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+    {% endblock %}
