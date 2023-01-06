@@ -59,7 +59,8 @@ def register():
         # user into session (cookie)
         session["gamer"] = request.form.get("gamerId").lower()
         flash("Gamer Registration Complete")
-        return redirect(url_for("account", gamer_id=session["user"]))
+        return redirect(url_for("account", gamer_id=session["gamer"]))
+
     return render_template("sign_up.html")
 
 
@@ -144,7 +145,8 @@ def edit_review(reviews_id):
             "review_content": request.form.get("review_content"),
             "uploaded_by": session["gamer"]
         }
-        mongo.db.reviews.update_many({"_id": ObjectId(reviews_id)}, save)
+        mongo.db.reviews.update_one(
+            {"_id": ObjectId(reviews_id)}, {"$set": save})
         flash("Your review has been changed")
 
     reviews = mongo.db.reviews.find_one({"_id": ObjectId(reviews_id)})
