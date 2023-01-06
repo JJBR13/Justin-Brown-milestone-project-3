@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content" method="POST" action="{{ url_for('edit_review', review_id=review._id) }}">
+        <!-- Game Name -->
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Game Name" id="game_name" name="game_name" class="input-bg" type="text"
+                    class="placeholder-text validate" required>
+            </div>
+
+            <!-- console type (dropdown) -->
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <select id="console_type" name="console_type" class="icons placeholder-text validate" required>
+                        <option value="" disabled selected>Select Console</option>
+                        {% for con in console %}
+                        <option value="{{ con.console_type }}" data-icon="images/sample-1.jpg">{{ con.console_type }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <!-- Category selector -->
+            <div class="row">
+                <div class="col s12">
+                    <ul>
+                        {% for category in categories %}
+                        <li class="col s2 center-align">
+                            <label>
+                                <input type="checkbox" class="filled-in center-align">
+                                <span>{{ category.category_name }}</span>
+                            </label>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Review content -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="review_content" name="review_content" placeholder="Type Review Here"
+                        class="materialize-textarea placeholder-text"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="" class="btn-small done-btn module-close">Done</a>
+    </div>
+</div>
+
+{% endblock %}

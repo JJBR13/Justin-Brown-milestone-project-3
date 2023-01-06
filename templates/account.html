@@ -44,6 +44,17 @@
                     {{ review.review_content }}
                 </div>
             </div>
+
+            <!-- Edit & Delete Btn -->
+            <div class="row">
+                <div class="col s4">
+                </div>
+                <div class="col s4">
+                    <a href="{{ url_for('edit_task', review_id) }}" class="btn-small edit-btn modal-trigger">Edit</a>
+                </div>
+                <div class="col s4">
+                </div>
+            </div>
         </div>
 
         <div class="row center-align">
@@ -59,4 +70,4 @@
     </div>
 </div>
 
-    {% endblock %}
+{% endblock %}
