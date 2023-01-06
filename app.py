@@ -136,12 +136,21 @@ def add_review():
 
 @app.route("/edit_review/<reviews_id>", methods=["GET", "POST"])
 def edit_review(reviews_id):
-    reviews = mongo.db.reviews.find_one({"_id": ObjectId(reviews_id)})
+    if request.method == "POST":
+        save = {
+            "console_type": request.form.get("console_type"),
+            "game_name": request.form.get("game_name"),
+            "category_type": request.form.get("category_type"),
+            "review_content": request.form.get("review_content"),
+            "uploaded_by": session["gamer"]
+        }
+        mongo.db.reviews.update_many({"_id": ObjectId(reviews_id)}, save)
+        flash("Your review has been changed")
 
+    reviews = mongo.db.reviews.find_one({"_id": ObjectId(reviews_id)})
     console = mongo.db.console.find().sort("console_type", 1)
-    categories = mongo.db.categories.find()
-    return render_template(
-        "edit_review.html", reviews=reviews, console=console, categories=categories)
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_review.html", reviews=reviews, console=console, categories=categories)
 
 
 if __name__ == "__main__":

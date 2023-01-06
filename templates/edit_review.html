@@ -13,7 +13,7 @@
         <!-- Game Name -->
         <div class="row">
             <div class="input-field col s6">
-                <input placeholder="Game Name" id="game_name" name="game_name" class="input-bg" type="text"
+                <input value="{{ reviews.game_name }}" placeholder="Game Name" id="game_name" name="game_name" class="input-bg" type="text"
                     class="placeholder-text validate" required>
             </div>
 
@@ -21,43 +21,70 @@
             <div class="row">
                 <div class="input-field col s12 m6">
                     <select id="console_type" name="console_type" class="icons placeholder-text validate" required>
-                        <option value="" disabled selected>Select Console</option>
+                        <option value="" disabled>Select Console</option>
                         {% for con in console %}
-                        <option value="{{ con.console_type }}" data-icon="images/sample-1.jpg">{{ con.console_type }}
-                        </option>
+                            {% if con.console_type == reviews.console_type %}
+                                <option value="{{ con.console_type }}" selected data-icon="images/sample-1.jpg">{{ con.console_type }}
+                                </option>
+                            {% else %}
+                                <option value="{{ con.console_type }}" data-icon="images/sample-1.jpg">{{ con.console_type }}
+                                </option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                 </div>
             </div>
 
             <!-- Category selector -->
-            <div class="row">
+              <div class="row">
                 <div class="col s12">
                     <ul>
                         {% for category in categories %}
                         <li class="col s2 center-align">
-                            <label>
-                                <input type="checkbox" class="filled-in center-align">
-                                <span>{{ category.category_name }}</span>
-                            </label>
+                            {% if category.category_name == reviews.category_type %}
+                                <label>
+                                    <input type="checkbox" class="filled-in center-align" checked="checked">
+                                    <span>{{ category.category_name }}</span>
+                                </label>
+                            {% else %}
+                                <label>
+                                    <input type="checkbox" class="filled-in center-align">
+                                    <span>{{ category.category_name }}</span>
+                                </label>
+                            {% endif %}
                         </li>
                         {% endfor %}
                     </ul>
                 </div>
             </div>
 
+
             <!-- Review content -->
             <div class="row">
                 <div class="input-field col s12">
                     <textarea id="review_content" name="review_content" placeholder="Type Review Here"
-                        class="materialize-textarea placeholder-text"></textarea>
+                        class="materialize-textarea placeholder-text">
+                    {{- reviews.review_content -}}
+                    </textarea>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal-footer center">
-        <a href="{ url_for('account') }" class="btn-small done-btn module-close">Done</a>
-    </div>
+    
+    <!-- Save & Cancel btn -->
+    <div class="row">
+        <div class="col s2">
+        </div>    
+        
+        <div class="col s8">
+            <div class="modal-footer center">
+                <a href="#" class="btn-small cancel-btn">Cancel</a>
+                <a href="{{ url_for('home') }}" class="btn-small save-btn">Save</a>
+            </div>
+        </div>
+
+        <div class="col s2">
+        </div>  
 </div>
 
 {% endblock %}
