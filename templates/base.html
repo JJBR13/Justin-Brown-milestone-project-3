@@ -41,7 +41,7 @@
         <ul class="hide-on-med-and-down">
           <li><a href="{{ url_for('home') }}" class="nav-header">Home</a></li>
           <li><a href="{{ url_for('import_reviews') }}" class="nav-header">Reviews</a></li>
-          <li><a href="#" class="nav-header">Contact</a></li>
+          <li><a href="{{ url_for('contact') }}" class="nav-header">Contact</a></li>
           {% if session.gamer %}
               <!-- Dropdown Trigger -->
               <li><a class="dropdown-trigger nav-header" href="{{ url_for('account', gamer_id=session['gamer']) }}" data-target="dropdown1">Account<i
@@ -64,7 +64,7 @@
       <li><a href="{{ url_for('account', gamer_id=session['gamer']) }}">Account</a></li>
       <li><a href="{{ url_for('add_review') }}" class="nav-header">Add review</a></li>
       <li><a href="{{ url_for('logout') }}" class="nav-header">Logout</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact</a></li>
     </ul>
   </header>
 
@@ -74,7 +74,6 @@
         {% if messages %}
             {% for message in messages %}
                 <div class="row flash-container">
-                  <i class="fa-solid fa-circle-xmark" onclick=delete_flash(this)></i>
                   {{ message }}
                 </div>
             {% endfor %}
@@ -89,17 +88,17 @@
 
   <footer class="page-footer">
     <div>
-      <div class="row">
-        <div class="col s6">
+      <div class="row center-align">
+        <div class="col s2">
           <a href="{{ url_for('home') }}"><img id="footer-logo" class="p-t" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"></a>
         </div>
 
-        <div class="col s6">
+        <div class="col s10">
           <nav class="no-box-shadow">
           <ul class="right m-r">
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('import_reviews') }}">Reviews</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
             {% if session.gamer %}
               <li><a href="{{ url_for('account', gamer_id=session['gamer']) }}" >Account</a></li>
               <li><a href="{{ url_for('add_review') }}">Add review</a></li>

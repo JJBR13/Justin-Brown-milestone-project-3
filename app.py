@@ -183,6 +183,11 @@ def delete_review(reviews_id):
         return redirect(url_for("account", gamer_id=user['_id']))
 
 
+@app.route("/contact")
+def contact():
+    return render_template('contact.html')
+
+
 @app.errorhandler(404)
 def not_found(error):
     # Redirect for route handle error

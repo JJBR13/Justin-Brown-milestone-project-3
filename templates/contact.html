@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row p-t">
+    <form class="col s12 m8 offset-m2">
+        <div class="card-panel shadow">
+            <div class="row">
+
+                <div>
+                    <h3 class="center-align header-text">Contact Now</h3>
+                </div>
+
+                <!-- Name -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="Name" id="name" name="name" class="input-bg" type="text"
+                            class="placeholder-text validate" required>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="Email" id="email" name="email" class="input-bg" type="text"
+                            class="placeholder-text validate" required>
+                    </div>
+                </div>
+
+
+
+                <!-- Message -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="review_content" name="review_content" placeholder="Type Review Here"
+                            class="materialize-textarea placeholder-text"></textarea>
+                    </div>
+                </div>
+
+                <!-- Submit btn -->
+                <div class="col s12 center-align">
+                    <button class="btn waves-effect waves-light sub-btn" type="submit">
+                        Send Message
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
