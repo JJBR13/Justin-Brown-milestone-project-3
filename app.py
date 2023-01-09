@@ -39,19 +39,20 @@ def import_reviews():
 
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
-    # get the user, we need to get the id for a redirect
-    user = mongo.db.gamer_id.find_one({"gamer_id": session["gamer"]})
-
     if request.method == "POST":
         # checking user exits
         existing_gamer = mongo.db.gamer_id.find_one(
             {"gamer_id": request.form.get("gamer_id")})
 
+        # checks varible return to sign_up
         if existing_gamer:
             flash("Sorry this gamer Id has been taken")
             return redirect(url_for("sign_up"))
 
+        # Dictionary created from form data to insert new gamer_id
         sign_up = {
+            "first_name": request.form.get("first_name").lower(),
+            "last_name": request.form.get("last_name").lower(),
             "gamer_id": request.form.get("gamer_id").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
@@ -62,6 +63,8 @@ def sign_up():
         # user into session (cookie)
         session["gamer"] = request.form.get("gamerId")
         flash("Gamer Registration Complete")
+        # get the user, we need to get the id for a redirect
+        user = mongo.db.gamer_id.find_one({"gamer_id": session["gamer"]})
         return redirect(url_for("account", gamer_id=user['_id']))
 
     return render_template("sign_up.html")
