@@ -155,6 +155,12 @@ def edit_review(reviews_id):
     return render_template("edit_review.html", reviews=reviews, console=console, categories=categories)
 
 
+@app.errorhandler(404)
+def not_found(error):
+    # Redirect for route handle error
+    return render_template('404.html')
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Materilize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
+
+    {% block styles %}
+    {% endblock %}
+    <title>Escape Gaming Reviews </title>
+</head>
+<body>
+
+    <!-- Add logo clickable link to home above -->
+
+      <!-- Error Content -->
+      <div class="row center-align">
+        <div class="col s12">
+            <p>404 ERROR - Sorry Page Not Found</p>
+            <p>whoops, it looks like you are looking for a page that not exist. </p>
+            <p>To return to the home page, please <a href="{{ url_for('home') }}">click here</a></p>
+        </div>
+      </div>
+    
+</body>
+</html>
