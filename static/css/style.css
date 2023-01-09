@@ -105,6 +105,11 @@ nav.nav-center ul li a {
 
 /* -------------------------------------- Footer*/
 
+#footer-logo {
+    height: 180px;
+    width: 180px;
+}
+
 
 /* ------------------------------------- Submit btn form */
 
