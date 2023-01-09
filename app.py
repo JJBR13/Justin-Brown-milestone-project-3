@@ -38,28 +38,31 @@ def import_reviews():
 
 
 @app.route("/sign_up", methods=["GET", "POST"])
-def register():
+def sign_up():
+    # get the user, we need to get the id for a redirect
+    user = mongo.db.gamer_id.find_one({"gamer_id": session["gamer"]})
+
     if request.method == "POST":
         # checking user exits
         existing_gamer = mongo.db.gamer_id.find_one(
-            {"gamer_id": request.form.get("gamer_id").lower()})
+            {"gamer_id": request.form.get("gamer_id")})
 
         if existing_gamer:
             flash("Sorry this gamer Id has been taken")
-            return redirect(url_for("register"))
+            return redirect(url_for("sign_up"))
 
-        register = {
+        sign_up = {
             "gamer_id": request.form.get("gamer_id").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
 
         # insert user to db
-        mongo.db.gamer_id.insert_one(register)
+        mongo.db.gamer_id.insert_one(sign_up)
 
         # user into session (cookie)
-        session["gamer"] = request.form.get("gamerId").lower()
+        session["gamer"] = request.form.get("gamerId")
         flash("Gamer Registration Complete")
-        return redirect(url_for("account", gamer_id=session["gamer"]))
+        return redirect(url_for("account", gamer_id=user['_id']))
 
     return render_template("sign_up.html")
 
@@ -149,7 +152,7 @@ def edit_review(reviews_id):
         mongo.db.reviews.update_one(
             {"_id": ObjectId(reviews_id)}, {"$set": save})
         flash("Your review has been changed")
-        # get the user, we need to get the id for a redirect
+        # get the user, then need to get the id for a redirect
         user = mongo.db.gamer_id.find_one({"gamer_id": session["gamer"]})
         return redirect(url_for("account", gamer_id=user['_id']))
 
