@@ -25,8 +25,8 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home")
 def home():
-    categories = mongo.db.categories.find()
-    console = mongo.db.console.find()
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    console = mongo.db.console.find().sort("console_type", 1)
     return render_template(
         "index.html", categories=categories, console=console)
 

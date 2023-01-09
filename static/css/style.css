@@ -15,6 +15,12 @@ body {
     text-shadow: 2px 2px 5px red;
 }
 
+.header-text-blue {
+    font-family: 'Syne Mono', monospace;
+    color: #5B5C50;
+    text-shadow: 2px 2px 5px #1f38c6;
+}
+
 .p-t {
     padding-top: 2%;
 }
@@ -29,6 +35,10 @@ body {
 
 .shadow {
     box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.blue-shadow {
+    box-shadow : 0 4px 8px 0 rgb(31, 56, 198), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .no-box-shadow {
@@ -48,6 +58,11 @@ hr {
     border: 0 none;
     box-shadow : 0 4px 8px 0 rgba(91, 92, 80, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
+
+  .hide {
+    visibility: hidden;
+    display: none;
+}
 
 /* ---------------------------------- hero & header block */
 
@@ -230,7 +245,7 @@ nav {
 
 .edit-btn, .save-btn {
     background-color: rgba(128, 128, 128, 0.85);
-    box-shadow: 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgb(31, 56, 198,1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     filter: brightness(130%);
 }
 

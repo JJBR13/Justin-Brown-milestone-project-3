@@ -21,7 +21,8 @@
                     <select id="console_type" name="console_type" class="icons placeholder-text validate" required>
                         <option value="" disabled selected>Select Console</option>
                         {% for con in console %}
-                            <option value="{{ con.console_type }}" data-icon="images/sample-1.jpg">{{ con.console_type }}</option>
+                        <option value="{{ con.console_type }}" data-icon="images/sample-1.jpg">{{ con.console_type }}
+                        </option>
                         {% endfor %}
                     </select>
                 </div>
@@ -32,12 +33,12 @@
                 <div class="col s12">
                     <ul>
                         {% for category in categories %}
-                            <li class="col s2 center-align">
-                                <label>
-                                    <input type="checkbox" class="filled-in center-align">
-                                    <span>{{ category.category_name }}</span>
-                                </label>
-                            </li>
+                        <li class="col s2 center-align">
+                            <label>
+                                <input type="checkbox" class="filled-in center-align">
+                                <span>{{ category.category_name }}</span>
+                            </label>
+                        </li>
                         {% endfor %}
                     </ul>
                 </div>
