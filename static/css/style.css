@@ -208,7 +208,7 @@ nav {
     margin: 0;
 }
 
-/* check boxes */ 
+/* --------------------------------------------------------------------- check boxes */ 
 
 [type="checkbox"].filled-in:checked+span:not(.lever):after {
     border: 2px solid #5B5C50;
@@ -247,5 +247,16 @@ nav {
 .cancel-btn:hover {
     filter: brightness(130%);
     background-color: #5B5C50;
+    box-shadow: 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.delete-btn {
+    background-color: rgba(70, 68, 68, 0.85);
+    filter: brightness(130%);
+}
+
+.delete-btn:hover {
+    background-color: rgba(70, 68, 68, 0.85);
+    filter: brightness(130%);
     box-shadow: 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

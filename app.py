@@ -145,9 +145,13 @@ def edit_review(reviews_id):
             "review_content": request.form.get("review_content"),
             "uploaded_by": session["gamer"]
         }
+        # Update saved to mongoDB
         mongo.db.reviews.update_one(
             {"_id": ObjectId(reviews_id)}, {"$set": save})
         flash("Your review has been changed")
+        # get the user, we need to get the id for a redirect
+        user = mongo.db.gamer_id.find_one({"gamer_id": session["gamer"]})
+        return redirect(url_for("account", gamer_id=user['_id']))
 
     reviews = mongo.db.reviews.find_one({"_id": ObjectId(reviews_id)})
     console = mongo.db.console.find().sort("console_type", 1)
@@ -167,13 +171,13 @@ def delete_review(reviews_id):
         # try to delete review here
         mongo.db.reviews.delete_one({"_id": ObjectId(reviews_id)})
         # success message
-        flash("Review Sucessfully deleted")
+        flash("Review Sucessfully Deleted")
         # redirect
         return redirect(url_for("account", gamer_id=user['_id']))
     else:
         # review does not exist, redirect to home
-        return redirect(url_for('home'))
-
+        flash("This review does not exist")
+        return redirect(url_for("account", gamer_id=user['_id']))
 
 
 @app.errorhandler(404)
