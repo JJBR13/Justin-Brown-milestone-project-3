@@ -155,10 +155,31 @@ def edit_review(reviews_id):
     return render_template("edit_review.html", reviews=reviews, console=console, categories=categories)
 
 
+@app.route("/delete_review/<reviews_id>")
+def delete_review(reviews_id):
+
+    # get the review, delete this after
+    review = mongo.db.reviews.find_one({"_id": ObjectId(reviews_id)})
+    # get the user, we need to get the id for a redirect
+    user = mongo.db.gamer_id.find_one({"gamer_id": session["gamer"]})
+
+    if review:
+        # try to delete review here
+        mongo.db.reviews.delete_one({"_id": ObjectId(reviews_id)})
+        # success message
+        flash("Review Sucessfully deleted")
+        # redirect
+        return redirect(url_for("account", gamer_id=user['_id']))
+    else:
+        # review does not exist, redirect to home
+        return redirect(url_for('home'))
+
+
+
 @app.errorhandler(404)
 def not_found(error):
     # Redirect for route handle error
-    return render_template('404.html')
+    return render_template('404.html', error=error), 404
 
 
 if __name__ == "__main__":
