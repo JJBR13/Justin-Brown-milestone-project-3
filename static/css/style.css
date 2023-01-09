@@ -142,15 +142,17 @@ input[type=text]:not(.browser-default), input[type=password]:not(.browser-defaul
 }
 
 .sub-btn {
-    background-color: #5B5C50;
-    box-shadow: 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(70, 68, 68, 0.85);
+    filter: brightness(130%);
+    box-shadow : 0 4px 8px 0 rgb(31, 56, 198), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .sub-btn:hover {
-    background-color: #5B5C50;
-    box-shadow: 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(40, 39, 39, 0.85);
     filter: brightness(130%);
+    box-shadow : 0 4px 8px 0 rgb(31, 56, 198), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 
 /* -------------------------------------- flash messages */ 
 
