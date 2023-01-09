@@ -7,3 +7,5 @@ $(document).ready(function(){
     $('.carousel').carousel();
     $('select').formSelect();
   });
+
+  document.write(new Date().getFullYear());
