@@ -61,11 +61,10 @@ def sign_up():
         mongo.db.gamer_id.insert_one(sign_up)
 
         # user into session (cookie)
-        session["gamer"] = request.form.get("gamerId")
+        session["gamer"] = request.form.get("gamer_id")
         flash("Gamer Registration Complete")
-        # get the user, we need to get the id for a redirect
-        user = mongo.db.gamer_id.find_one({"gamer_id": session["gamer"]})
-        return redirect(url_for("account", gamer_id=user['_id']))
+
+        return render_template('account.html', gamer_id=session['gamer'])
 
     return render_template("sign_up.html")
 
