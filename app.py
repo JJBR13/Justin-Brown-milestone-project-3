@@ -34,6 +34,14 @@ def home():
         "index.html", categories=categories, console=console)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+
+    reviews = mongo.db.reviews.find({"$text": {"$search": query}})
+    return render_template("reviews.html", reviews=reviews)
+
+
 @app.route("/import_reviews")
 def import_reviews():
     """

@@ -25,6 +25,10 @@ body {
     padding-top: 2%;
 }
 
+.m-r {
+    margin-top: 2%;
+}
+
 .p-b {
     padding-bottom: 10px;
 }
@@ -110,6 +114,14 @@ nav.nav-center ul li {
 }
 nav.nav-center ul li a {
     display: inline-block;
+}
+
+.hero-container {
+        height: 50vh;
+}
+
+.p-t-search {
+    padding-top: 4%;
 }
 
 /* ------------------------------------- Cat carousel */
