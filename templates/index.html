@@ -24,14 +24,14 @@
         <h3 class="center-align header-text">Reviews by Devices</h3>
     </div>
 
-    <div class="row">
+    <div class="row p-t">
         {% for con in console %}
-        <div class="col s4">
-            <div class="card-panel blue-shadow">
-                <!-- img background-->
-            </div>
+        <div class="col s3">
             <div class="center-align">
-                <h4>{{ con.console_type }}</h4>
+                <button class="console-btn blue-shadow">{{ con.console_type }}</button>
+            </div>
+            <div class="row">
+                <div class="col"></div>
             </div>
         </div>
         {% endfor %}
