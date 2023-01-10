@@ -229,6 +229,14 @@ def contact():
     return render_template('contact.html')
 
 
+@app.route("/read_more/<reviews_id>")
+def read_more(reviews_id):
+    # get reviews_id from Db
+    review = mongo.db.reviews.find_one({"_id": ObjectId(reviews_id)})
+
+    return render_template('read_more.html', review=review)
+
+
 @app.errorhandler(404)
 def not_found(error):
     """

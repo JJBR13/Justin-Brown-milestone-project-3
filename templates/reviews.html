@@ -28,15 +28,12 @@
                 </div>
             </nav>
 
-            <!--Image -->
+            
             <div class="row">
-                <div class="col s4">
-                    <!-- img background upoloaded will be here left -->
-                </div>
-
                 <!-- Review content -->
-                <div class="col s8">
-                    {{ review.review_content }}
+                <div class="col s12">
+                    {{ review.review_content|truncate(120, true, '') }}
+                    <a href="{{ url_for('read_more', reviews_id=review._id) }}">read more</a>
                 </div>
             </div>
         </div>

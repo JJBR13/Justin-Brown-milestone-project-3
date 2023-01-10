@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Review -->
+<div class="row">
+    <div class="col s12">
+        <div class="card-panel shadow">
+            <!-- Game Name-->
+            <div class="center-align">
+                <h3 id="r-heading">{{ review.game_name }}</h3>
+            </div>
+
+            <!-- Review by -->
+            <div class="center-align">
+                <h3 id="gamer-head">{{ review.uploaded_by }}</h3>
+            </div>
+            <!-- Review content -->
+            <div>
+                {{ review.review_content }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Back Btn -->
+<div class="row">
+    <div class="col s12 center-align">
+        <div col class="s6">
+        <a href="{{ url_for('import_reviews') }}" class="btn blue-shadow">Back</a>
+        </div>
+        <div col class="s6">
+        <button id=top-btn onclick="topFunction()">Back to top</button>
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}
