@@ -128,7 +128,8 @@ nav.nav-center ul li a {
 
 /* ------------------------------------- Submit btn form */
 
-.placeholder-text {
+input::placeholder, .input-field>label {
+    color: black;
     font-family: 'Gruppo', cursive;
     font-size: 18px;
     font-weight: bold;

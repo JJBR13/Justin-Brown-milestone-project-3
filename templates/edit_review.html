@@ -13,13 +13,13 @@
         <!-- Game Name -->
         <div class="input-field col s6">
             <input value="{{ reviews.game_name }}" placeholder="Game Name" id="game_name" name="game_name"
-                class="input-bg" type="text" class="placeholder-text validate" required>
+                class="input-bg" type="text" class="validate" required>
         </div>
 
         <!-- console type (dropdown) -->
         <div class="row">
             <div class="input-field col s12 m6">
-                <select id="console_type" name="console_type" class="icons placeholder-text validate" required>
+                <select id="console_type" name="console_type" class="icons validate" required>
                     <option value="" disabled>Select Console</option>
                     {% for con in console %}
                     {% if con.console_type == reviews.console_type %}
@@ -62,7 +62,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <textarea id="review_content" name="review_content" placeholder="Type Review Here"
-                    class="materialize-textarea placeholder-text">
+                    class="materialize-textarea">
                     {{- reviews.review_content -}}
                     </textarea>
             </div>
