@@ -39,14 +39,33 @@ DISCLAIMER: This is a project for Code Institute, to demonstrate understanding o
 
 ## Ideology
 
+The idea behind this website demonstrates 'CRUD' functionality. This site allows the user to browse game reviews from other gamers, allowing the user to gain a better understanding and knowledge before purchasing the game themselves. 
+
+## User Experience 
+
+### User Stories 
+
+### The First Time User 
+
+* Being a first-time user, I want an easy-navigating site. 
+* Being a first-time user, I want the sign-up process to be smooth and available.
+* Being a first-time user, I want to be able to search existing reviews.
+
+### The Regular User
+
+* Being a Regular user, I want the login button easily accessible.
+* Being a Regular user, I want to be able to add new reviews easily.
+* Being a Regular user, I want to be able to edit my reviews in case of typo.
+* Being a Regular user, I want to be able to delete my reviews.
+* Being a Regular user, I want would like to search other gamers' reviews. 
+* Being a Regular user, I want like to contact the admin if I encounter any issues.
 
 ## References, Credit, Frameworks & Programs
-
 
 ### References
 
 - [Canva.com](https://www.canva.com/colors/color-palettes/sweet-succulents/)
-    - Used to gage simplistic pallets for design.
+    - Used to gauge simplistic pallets for design.
 
 - [Fotor](https://www.fotor.com/design/project/cdc12d1d-ad35-48ac-8e90-24a5eeea1f81/template)
     - Used to create the header banner.  
