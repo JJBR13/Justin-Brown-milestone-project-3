@@ -10,6 +10,7 @@ DISCLAIMER: This is a project for Code Institute, to demonstrate understanding o
 
 # Repository 
 
+[Locate project repository here](https://github.com/JJBR13/Justin-Brown-milestone-project-3)
 
 # Contents 
 
@@ -56,6 +57,12 @@ DISCLAIMER: This is a project for Code Institute, to demonstrate understanding o
     - Used to import fonts into style.css. 
 
 ### Credit 
+
+- [stack Overflow](https://stackoverflow.com/questions/50687845/jinja-how-to-force-truncate-when-value-exceeds-specified-field-width)
+    - Code taken for truncate function. 
+
+- [Steam & Steam users](https://store.steampowered.com/)
+    - Pull review content from users about certain games.
 
 - [w3school](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp): 
     - Back to top button js function code.
