@@ -43,10 +43,21 @@
                 <div class="col s4">
                 </div>
                 <div class="col s4">
-                    <a href="{{ url_for('edit_review', reviews_id=review._id) }}" class="btn-small edit-btn modal-trigger">Edit</a>
-                    <a href="{{ url_for('delete_review', reviews_id=review._id) }}" class="btn-small delete-btn modal-trigger">Delete</a>
+                    <a href="{{ url_for('edit_review', reviews_id=review._id) }}" class="btn-small edit-btn">Edit</a>
+                    <a href="#modal-delete-{{review._id}}" class="delete-btn btn red modal-trigger">Delete</a>
                 </div>
-                <div class="col s4">
+                <!-- Confirmation deletion Modal -->
+                <div id="modal-delete-{{review._id}}" class="modal shadow p-t">
+                    <div class="modal-content">
+                        <h4 class="header-text-blue">Confirm Delete review</h4>
+                        <p> Are you sure you want to delete {{ review.game_name }} review?</p>
+                    </div>
+                    <div class="modal-footer center-align">
+                        <a href="{{ url_for('delete_review', reviews_id=review._id) }}"
+                            class="delete-btn btn red modal-trigger modal-close">Delete</a>
+                        <a href="#"
+                            class="modal-close waves-effect waves-green btn-flat blue-shadow">Cancel</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -162,7 +162,6 @@ nav.nav-center ul li a {
     width: 100px;
 }
 
-
 /* ------------------------------------- Submit btn form */
 
 input::placeholder, .input-field>label {
@@ -279,7 +278,7 @@ nav {
     filter: brightness(130%);
 }
 
-.cancel-btn, .delete-btn {
+.cancel-btn {
     background-color: #5B5C50;
     filter: brightness(130%);
 }
@@ -290,7 +289,6 @@ nav {
     box-shadow: 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
-.dropdown-new {
-    background-color: orange;
+.modal {
+    border-radius: 5px;
 }

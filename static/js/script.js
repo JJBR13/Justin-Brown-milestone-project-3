@@ -6,6 +6,7 @@ $(document).ready(function(){
     M.updateTextFields();
     $('.carousel').carousel();
     $('select').formSelect();
+    $('.modal').modal();
   });
 
   document.write(new Date().getFullYear());
