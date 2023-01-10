@@ -21,7 +21,6 @@ DISCLAIMER: This is a project for Code Institute, to demonstrate understanding o
     + [Wireframes](#wireframes)
     + [Colour Palette](#colour-palette)
     + [Typography](#typography)
-    + [Images](#images)
 - [Current Features](#current-features)
     + [Responsive On All Devices](#responsive-on-all-devices)
 - [Future Releases](#future-releases)
@@ -59,6 +58,67 @@ The idea behind this website demonstrates 'CRUD' functionality. This site allows
 * Being a Regular user, I want to be able to delete my reviews.
 * Being a Regular user, I want would like to search other gamers' reviews. 
 * Being a Regular user, I want like to contact the admin if I encounter any issues.
+
+## Design 
+
+![Skeleton](documents/skeleton.png)
+
+### Wireframes
+
+[Click here for Wireframe PDF](#!)
+
+### Colour Pallete
+
+- To generate the feeling of the gaming community the site took inspiration from the RGB keyboard backlight. Along with fresh neutral colors to keep the sire inviting. 
+
+![Colour Pallette1](documents/colour.png)
+
+### Typography
+
+[*Sourced via google fonts.*](https://fonts.google.com/)
+
+- Header font: Syne Mono 
+
+![Header Font](documents/header_font.png)
+
+- Content font: Gruppo
+
+![Body Font](documents/body_font.png)
+
+## Current Features
+
+### Favicon 
+
+### Banner 
+
+### Navbar
+
+### Pages 
+
+#### Home 
+
+#### Reviews
+
+#### Contact 
+
+#### Sign Up
+
+#### Account 
+
+#### Login 
+
+#### 404 Error page
+
+## Future Release
+
+### Logout functionality
+### Add review
+### Edit Review 
+### Delete Review 
+
+### Footer 
+
+### Other Features 
 
 ## References, Credit, Frameworks & Programs
 
