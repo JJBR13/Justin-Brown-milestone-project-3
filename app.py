@@ -25,6 +25,9 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home")
 def home():
+    """
+    Renders home page when lauching the main site.
+    """
     categories = mongo.db.categories.find().sort("category_name", 1)
     console = mongo.db.console.find().sort("console_type", 1)
     return render_template(
@@ -33,12 +36,20 @@ def home():
 
 @app.route("/import_reviews")
 def import_reviews():
+    """
+    GET 's all reviews from db,
+    displaying them on review.html.
+    """
     reviews = mongo.db.reviews.find()
     return render_template("reviews.html", reviews=reviews)
 
 
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
+    """
+    Sign-up page, allows user to register, if username
+    doesnt already exist
+    """
     if request.method == "POST":
         # checking user exits
         existing_gamer = mongo.db.gamer_id.find_one(
@@ -71,6 +82,11 @@ def sign_up():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    Allows exsiting user to log into account.
+    Checks user agaisnt db data, allowing login.
+    Redirects to account page.
+    """
     if request.method == "POST":
         # check gamer id exists
         existing_gamer = mongo.db.gamer_id.find_one(
@@ -100,6 +116,11 @@ def login():
 
 @app.route("/account/<gamer_id>", methods=["GET", "POST"])
 def account(gamer_id):
+    """
+    Passes gamer session gamer_id from db,
+    returns them to account page.
+    Where all reviews created via the user are displayed.
+    """
     # getting gamers session gamer_id of db
     gamer_id = mongo.db.gamer_id.find_one(
         {"gamer_id": session["gamer"]})["gamer_id"]
@@ -114,6 +135,10 @@ def account(gamer_id):
 
 @app.route("/logout")
 def logout():
+    """
+    Removes logged in session gamer cookie,
+    Redirects them to home page.
+    """
     flash("See you soon")
     session.pop("gamer")
     return redirect(url_for("home"))
@@ -121,6 +146,10 @@ def logout():
 
 @app.route("/add_review", methods=["GET", "POST"])
 def add_review():
+    """
+    Allows gamer to create review, add to the db.
+    Gets values from Db, renders add_review.html.
+    """
     if request.method == "POST":
         review = {
             "console_type": request.form.get("console_type"),
@@ -142,6 +171,10 @@ def add_review():
 
 @app.route("/edit_review/<reviews_id>", methods=["GET", "POST"])
 def edit_review(reviews_id):
+    """
+    Allows gamer to edit review, displays flash message if sucessfull.
+    Redirects gamer to account page.
+    """
     if request.method == "POST":
         save = {
             "console_type": request.form.get("console_type"),
@@ -166,7 +199,10 @@ def edit_review(reviews_id):
 
 @app.route("/delete_review/<reviews_id>")
 def delete_review(reviews_id):
-
+    """
+    Enables gamer to delete review, they created.
+    Redirects them back to account page.
+    """
     # get the review, delete this after
     review = mongo.db.reviews.find_one({"_id": ObjectId(reviews_id)})
     # get the user, we need to get the id for a redirect
@@ -187,11 +223,17 @@ def delete_review(reviews_id):
 
 @app.route("/contact")
 def contact():
+    """
+    Renders contact.html
+    """
     return render_template('contact.html')
 
 
 @app.errorhandler(404)
 def not_found(error):
+    """
+    Returns 404.html, if 404 error is present.
+    """
     # Redirect for route handle error
     return render_template('404.html', error=error), 404
 
