@@ -20,20 +20,16 @@
                 <h3 id="gamer-head">{{ review.uploaded_by }}</h3>
             </div>
 
-            <!-- Breadcrumbs-->
-            <nav id="bcrumbs" class="center-align">
-                <div class="col s12 p-b">
-                    <a href="#!" class="breadcrumb">{{ review.console_type }}</a>
-                    <a href="#!" class="breadcrumb">{{ review.category_type }}</a>
-                </div>
-            </nav>
+            <!-- Category-->
+            <div class="col s12 p-b">
+                <p><strong>{{ review.console_type }}</strong></p>
+            </div>
 
-            
             <div class="row">
                 <!-- Review content -->
                 <div class="col s12">
                     {{ review.review_content|truncate(120, true, '') }}
-                    <a href="{{ url_for('read_more', reviews_id=review._id) }}">read more</a>
+                    <a  id="read_more" href="{{ url_for('read_more', reviews_id=review._id) }}">read more</a>
                 </div>
             </div>
         </div>

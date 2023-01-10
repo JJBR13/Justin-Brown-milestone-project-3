@@ -196,18 +196,15 @@ nav {
     background-color: rgba(255,255,255, 0);
 }
 
-#bcrumbs {
-    box-shadow: none;
-}
-
-.breadcrumb {
-    font-size: 12px;
-    font-weight: 400;
-    color: rgba(255,255,255,0.7);
-}
-
 .card-margin {
     margin: 15px;
+}
+
+#read_more {
+    font-family: 'Gruppo', cursive;
+    font-size: 20px;
+    color: blue;
+    text-shadow: 2px 2px 5px rgb(31, 56, 198);
 }
 
 /* ----------------------------------------- Add_review.html */
