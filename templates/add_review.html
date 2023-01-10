@@ -27,20 +27,19 @@
                     </select>
                 </div>
             </div>
+            
+             <!-- Category dropdown -->
 
-            <!-- Category selector -->
-            <div class="row">
-                <div class="col s12">
-                    <ul>
+             <div class="row">
+                <div class="input-field col s12">
+                    <select id="category_name" name="category_name" class="icons validate" required>
+                        <option class="op-style" value="" disabled selected>Choose Category</option>
                         {% for category in categories %}
-                        <li class="col s2 center-align">
-                            <label>
-                                <input type="checkbox" class="filled-in center-align">
-                                <span>{{ category.category_name }}</span>
-                            </label>
-                        </li>
+                            <option value="{{ category.category_name }}">
+                                {{ category.category_name }}
+                            </option>
                         {% endfor %}
-                    </ul>
+                    </select>
                 </div>
             </div>
 

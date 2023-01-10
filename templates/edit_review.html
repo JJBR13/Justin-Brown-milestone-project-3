@@ -22,39 +22,37 @@
                 <select id="console_type" name="console_type" class="icons validate" required>
                     <option value="" disabled>Select Console</option>
                     {% for con in console %}
-                    {% if con.console_type == reviews.console_type %}
-                    <option value="{{ con.console_type }}">
-                        {{ con.console_type }}
-                    </option>
-                    {% else %}
-                    <option value="{{ con.console_type }}">{{ con.console_type }}
-                    </option>
-                    {% endif %}
+                        {% if con.console_type == reviews.console_type %}
+                        <option value="{{ con.console_type }}">
+                            {{ con.console_type }}
+                        </option>
+                        {% else %}
+                        <option value="{{ con.console_type }}">
+                            {{ con.console_type }}
+                        </option>
+                        {% endif %}
                     {% endfor %}
                 </select>
             </div>
         </div>
 
-        <!-- Category selector -->
+        <!-- Category dropdown -->
         <div class="row">
-            <div class="col s12">
-                <ul>
+            <div class="input-field col s12">
+                <select id="category_name" name="category_name" class="icons validate" required>
+                    <option value="" disabled>Select Console</option>
                     {% for category in categories %}
-                    <li class="col s2 center-align">
                         {% if category.category_name == reviews.category_type %}
-                        <label>
-                            <input type="checkbox" class="filled-in center-align" checked="checked">
-                            <span>{{ category.category_name }}</span>
-                        </label>
+                            <option value="{{ category.category_name }}">
+                                {{ category.category_name }}
+                            </option>
                         {% else %}
-                        <label>
-                            <input type="checkbox" class="filled-in center-align">
-                            <span>{{ category.category_name }}</span>
-                        </label>
+                            <option value="{{ category.category_name }}">
+                                {{ category.category_name }}
+                            </option>
                         {% endif %}
-                    </li>
                     {% endfor %}
-                </ul>
+                </select>
             </div>
         </div>
 
