@@ -1,18 +1,19 @@
 # Escape Gaming Reviews
-# Milestone Project 3:  *Deminstration of Backend Development understand, through a gaming review site.* 
+## Milestone Project 3:  *Deminstration of Backend Development understand, through a gaming review site.* 
 
 DISCLAIMER: This is a project for Code Institute, to demonstrate understanding of Backend Development, and not for finacial gain. 
 
 # SCRENSHOT HERE!
 
-# Live Project 
+## Live Project 
 
+[View live project here](https://game-review.herokuapp.com/)
 
-# Repository 
+## Repository 
 
 [Locate project repository here](https://github.com/JJBR13/Justin-Brown-milestone-project-3)
 
-# Contents 
+## Contents 
 
 - [Ideology](#ideology)
 - [User Experience](#user-eperience)
@@ -109,16 +110,21 @@ The idea behind this website demonstrates 'CRUD' functionality. This site allows
 
 #### 404 Error page
 
-## Future Release
-
 ### Logout functionality
+
 ### Add review
+
 ### Edit Review 
+
 ### Delete Review 
 
 ### Footer 
 
 ### Other Features 
+
+- Back to top button 
+
+## Future Release
 
 ## References, Credit, Frameworks & Programs
 
