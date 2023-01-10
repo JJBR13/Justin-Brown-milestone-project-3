@@ -141,16 +141,16 @@ input[type=text]:not(.browser-default), input[type=password]:not(.browser-defaul
     box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.sub-btn {
+.sub-btn, #back-btn {
     background-color: rgba(70, 68, 68, 0.85);
     filter: brightness(130%);
     box-shadow : 0 4px 8px 0 rgb(31, 56, 198), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.sub-btn:hover {
+.sub-btn:hover, #back-btn:hover {
     background-color: rgba(40, 39, 39, 0.85);
     filter: brightness(130%);
-    box-shadow : 0 4px 8px 0 rgb(31, 56, 198), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -207,6 +207,11 @@ nav {
     text-shadow: 2px 2px 5px rgb(31, 56, 198);
 }
 
+#top-btn {
+    background-color: rgba(128, 128, 128, 0.85);
+    filter: brightness(130%);
+}
+
 /* ----------------------------------------- Add_review.html */
 
 #add-panel {
@@ -241,8 +246,7 @@ nav {
     margin: 4px;
 }
 
-
-.edit-btn, .save-btn {
+.edit-btn, .save-btn, #top-btn:hover {
     background-color: rgba(128, 128, 128, 0.85);
     box-shadow: 0 4px 8px 0 rgb(31, 56, 198,1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     filter: brightness(130%);
@@ -253,24 +257,13 @@ nav {
     filter: brightness(130%);
 }
 
-.cancel-btn {
+.cancel-btn, .delete-btn {
     background-color: #5B5C50;
     filter: brightness(130%);
 }
 
-.cancel-btn:hover {
+.cancel-btn:hover, .delete-btn:hover {
     filter: brightness(130%);
     background-color: #5B5C50;
-    box-shadow: 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.delete-btn {
-    background-color: rgba(70, 68, 68, 0.85);
-    filter: brightness(130%);
-}
-
-.delete-btn:hover {
-    background-color: rgba(70, 68, 68, 0.85);
-    filter: brightness(130%);
     box-shadow: 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

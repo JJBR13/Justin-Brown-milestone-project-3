@@ -57,6 +57,9 @@ DISCLAIMER: This is a project for Code Institute, to demonstrate understanding o
 
 ### Credit 
 
+- [w3school](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp): 
+    - Back to top button js function code.
+    
 ### Frameworks 
 
 - [Font Awesome](https://fontawesome.com/): 
