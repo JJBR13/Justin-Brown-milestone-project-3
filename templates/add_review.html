@@ -19,9 +19,9 @@
             <div class="row">
                 <div class="input-field col s12 m6">
                     <select id="console_type" name="console_type" class="icons validate" required>
-                        <option value="" disabled selected>Select Console</option>
+                        <option class="op-style" value="" disabled selected>Select Console</option>
                         {% for con in console %}
-                        <option value="{{ con.console_type }}" data-icon="images/sample-1.jpg">{{ con.console_type }}
+                        <option value="{{ con.console_type }}">{{ con.console_type }}
                         </option>
                         {% endfor %}
                     </select>
