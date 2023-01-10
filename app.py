@@ -231,6 +231,10 @@ def contact():
 
 @app.route("/read_more/<reviews_id>")
 def read_more(reviews_id):
+    """
+    Gets review '_id' from Db, returns relavant review
+    in read_more.html
+    """
     # get reviews_id from Db
     review = mongo.db.reviews.find_one({"_id": ObjectId(reviews_id)})
 
