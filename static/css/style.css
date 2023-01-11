@@ -37,6 +37,17 @@ body {
     margin-right: 2%;
 }
 
+.redirect {
+    font-family: 'Syne Mono', monospace;
+    color: #5B5C50;
+}
+
+.redirect:hover {
+    font-family: 'Syne Mono', monospace;
+    color: #5B5C50;
+    text-shadow: 2px 2px 5px rgb(31, 56, 198);
+}
+
 .shadow {
     box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -144,29 +155,6 @@ nav.nav-center ul li a {
     vertical-align: middle;
     line-height: 200px;
 }
-
-.console-btn {
-    font-family: 'Syne Mono', monospace;
-    background-color: rgba(128, 128, 128, 0.85);
-    box-shadow: 0 4px 8px 0 rgb(31, 56, 198, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    filter: brightness(130%);
-    height: 30px;
-    width: 200px;
-    border: none;
-    border-radius: 5px;
-}
-
-.console-btn:hover {
-    font-family: 'Syne Mono', monospace;
-    background-color: #C2AD90;
-    box-shadow: 0 4px 8px 0 rgb(31, 56, 198, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    filter: brightness(130%);
-    height: 30px;
-    width: 200px;
-    border: none;
-    border-radius: 5px;
-}
-
 /* -------------------------------------- Footer*/
 
 #footer-logo {
@@ -190,13 +178,13 @@ input[type=text]:not(.browser-default), input[type=password]:not(.browser-defaul
     box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.sub-btn, #back-btn {
+.sub-btn, #back-btn, #review-now {
     background-color: rgba(70, 68, 68, 0.85);
     filter: brightness(130%);
     box-shadow : 0 4px 8px 0 rgb(31, 56, 198), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.sub-btn:hover, #back-btn:hover {
+.sub-btn:hover, #back-btn:hover, #review-now:hover {
     background-color: rgba(40, 39, 39, 0.85);
     filter: brightness(130%);
     box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -303,4 +291,8 @@ nav {
 
 .modal {
     border-radius: 5px;
+}
+
+#no-reviews {
+    font-size: 20px;
 }

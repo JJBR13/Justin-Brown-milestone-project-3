@@ -78,12 +78,12 @@
 
     {% else %}
     <!-- Shows if user has NO reviews -->
-    <div class="row">
+    <div class="row p-b">
         <div class="col s12 m10 offset-m1 l8 offset-l2 xl4 offset-xl2">
-            <h3>
+            <h3 id="no-reviews">
                 You have yet to write a review
             </h3>
-            <a href="{{ url_for('add_review') }}" class="btn-small">Review Now</a>
+            <a href="{{ url_for('add_review') }}" id="review-now" class="btn-small">Review Now</a>
         </div>
     </div>
 
