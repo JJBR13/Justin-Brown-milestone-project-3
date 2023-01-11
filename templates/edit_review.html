@@ -11,13 +11,13 @@
     <form class="col s12" method="POST" action="{{ url_for('edit_review', reviews_id=reviews._id) }}">
 
         <!-- Game Name -->
+        <div class="row">
         <div class="input-field col s6">
             <input value="{{ reviews.game_name }}" placeholder="Game Name" id="game_name" name="game_name"
                 class="input-bg" type="text" class="validate" required>
         </div>
 
         <!-- console type (dropdown) -->
-        <div class="row">
             <div class="input-field col s12 m6">
                 <select id="console_type" name="console_type" class="icons validate" required>
                     <option value="" disabled>Select Console</option>
