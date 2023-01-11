@@ -203,9 +203,37 @@ Achieving user stories:
 
 ### Other Features 
 
-- Back to top button 
+- This feature is located after clicking the read more link on the reviews. It allows the user after reading the review to go back to the top. 
 
 ## Future Release
+
+### 1) Create Admin Account
+
+- This would allow the admin to monitor reviews and remove & message users that have inapropriate reviews on the site. 
+
+### 2) Filter Buttons
+
+- Located on both review and home pages. That allow quick and easy filtering through reviews by game category type or the console it is played on. 
+
+### 3) Display Message: sign up and login functions 
+
+- When the user is signing up or login and the username is incorrect it would be good to have a message under the input field in read text displaying: "game id, have to be 6 characters long and only use the special character ($!&)". 
+
+### 4) Session Expiry 
+
+- A feature that automatically logout the user are a certain length of inactivity. 
+
+### 5) Image upload feature 
+
+- Allow the user to upload images to there reviews and profile. 
+
+### 6) Close Icon on the flash message
+
+- A close "x" on the flash message to remove them from the site manually in the user no longer wants it. 
+
+### 7) Add category
+
+- Allow the user to add new categories to the database when adding a review or editing a review.
 
 ## References, Credit, Frameworks & Programs
 
