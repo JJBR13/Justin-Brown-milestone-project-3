@@ -78,7 +78,7 @@ hr {
     font-size: 22px;
 }
 
-.nav-header:hover {
+.nav-header:hover, .dropdown-content li>a:hover {
     font-size: 22px;
     background-color: rgba(208, 17, 16, 0.6);
 }

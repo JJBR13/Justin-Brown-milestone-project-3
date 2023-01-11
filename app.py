@@ -134,7 +134,9 @@ def account(gamer_id):
         {"gamer_id": session["gamer"]})["gamer_id"]
 
     if session['gamer']:
+
         reviews = mongo.db.reviews.find({"uploaded_by": session["gamer"]})
+        
         return render_template(
             "account.html", gamer_id=gamer_id, reviews=reviews)
 
