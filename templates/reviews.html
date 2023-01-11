@@ -2,7 +2,7 @@
 {% block content %}
 
 <div>
-    <h3 class="center-align header-text p-b">All Reviews</h3>
+    <h1 class="center-align header-text p-b">All Reviews</h1>
 </div>
 
 <!-- Search bar -->
@@ -16,12 +16,17 @@
                     <input type="text" name="query" id="query" minlength="2" class="validate blue-shadow" placeholder="Search"
                         required>
                 </div>
-                <!-- Search btn -->
-                <div class="div col s12 l1">
-                    <button type="submit" class="blue-shadow right">Search</button>
+                <div class="col s12 l4">
                 </div>
-                <div class="div col s12 l1">
-                    <a href="{{ url_for('import_reviews') }}" class="btn shadow left">Reset</a>
+            </div>
+                <!-- Search btn -->
+                <div class="row center-align">
+                    <div class="div col s6">
+                        <button type="submit" class="btn search-btn right">Search</button>
+                    </div>
+                    <div class="div col s6">
+                        <a href="{{ url_for('import_reviews') }}" class="btn reset-btn left">Reset</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -38,7 +43,7 @@
             <div class="card-panel shadow">
                 <!-- Game Name-->
                 <div class="center-align">
-                    <h3 id="r-heading">{{ review.game_name }}</h3>
+                    <h2 id="r-heading">{{ review.game_name }}</h2>
                 </div>
 
                 <!-- Review by -->
@@ -64,7 +69,7 @@
     </div>
 {% else %}
 <div class="p-t p-b">
-    <p class="red-text text-darken-4 center-align">No Results Found</p>
+    <p class="red-text text-darken-4 center-align"><strong>No Results Found</strong></p>
 </div>
 {% endfor %}
 {% endblock %}
