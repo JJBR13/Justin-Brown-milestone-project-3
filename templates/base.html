@@ -13,9 +13,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     type="text/css">
   <!-- link to css -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" type="text/css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
   <!-- Favicon -->
-  <link rel="logo" sizes="180x180" href="{{ url_for('static', filename='images/favicon/favicon.png') }}">
+  <link rel="logo" sizes="180x180" href="{{ url_for('static', filename='images/favicon.png') }}">
   {% block styles %}
   {% endblock %}
   <title>Escape Gaming Reviews</title>
@@ -59,12 +59,15 @@
     <ul class="sidenav right" id="mobile-demo">
       <li><a href="{{ url_for('home') }}">Home</a></li>
       <li><a href="{{ url_for('import_reviews') }}" class="nav-header">Reviews</a></li>
-      <li><a href="{{ url_for('sign_up') }}">Sign up</a></li>
-      <li><a href="{{ url_for('login') }}">Login</a></li>
-      <li><a href="{{ url_for('account', gamer_id=session['gamer']) }}">Account</a></li>
-      <li><a href="{{ url_for('add_review') }}" class="nav-header">Add review</a></li>
-      <li><a href="{{ url_for('logout') }}" class="nav-header">Logout</a></li>
-      <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      {% if session.gamer %}
+        <li><a href="{{ url_for('account', gamer_id=session['gamer']) }}">Account</a></li>
+        <li><a href="{{ url_for('add_review') }}" class="nav-header">Add review</a></li>
+        <li><a href="{{ url_for('logout') }}" class="nav-header">Logout</a></li>
+      {% else %}
+        <li><a href="{{ url_for('sign_up') }}">Sign up</a></li>
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      {% endif %}
     </ul>
   </header>
 
@@ -100,7 +103,7 @@
             <li><a href="{{ url_for('import_reviews') }}">Reviews</a></li>
             <li><a href="{{ url_for('contact') }}">Contact</a></li>
             {% if session.gamer %}
-              <li><a href="{{ url_for('account', gamer_id=session['gamer']) }}" >Account</a></li>
+              <li><a href="{{ url_for('account', gamer_id=session['gamer']) }}">Account</a></li>
               <li><a href="{{ url_for('add_review') }}">Add review</a></li>
               <!-- edit review -->
               <li><a href="{{ url_for('logout') }}">Logout</a></li>
