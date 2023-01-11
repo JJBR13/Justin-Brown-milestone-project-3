@@ -267,21 +267,21 @@ Achieving user stories:
 - To deploy project live in Heroku the following steps were taken: 
 
 1. Go to [Heroku Web app](https://dashboard.heroku.com/apps) 
-2. Click new button
-3. Select create new app 
-4. Create name
-5. Select location
-6. Press create app
+2. Click the new button
+3. Select create a new app 
+4. Create a name
+5. Select the location
+6. Press create an app
 
-#### Contect Heroku to GitHub
+#### Connect Heroku to GitHub
 
-1. Click deploy tab, select GitHub. Connect to GitHub. 
-2. Type repository into search bar
-3. Once repository has been found, click th econnect button. 
+1. Click the deploy tab, and select GitHub. Connect to GitHub. 
+2. Type repository into the search bar
+3. Once the repository has been found, click the connect button. 
 
 #### Set Environment Variables 
-1. Click setting tab and click the Reveal Config vars button. 
-2. Add following information: 
+1. Click the setting tab and click the Reveal Config vars button. 
+2. Add the following information: 
     - key: IP, value: 0.0.0.0
     - key: PORT, value: 5000
     - key: MONGO_DBNAME, value: (database name you want to connect to)
