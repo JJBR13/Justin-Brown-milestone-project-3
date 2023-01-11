@@ -12,35 +12,36 @@
 
         <!-- Game Name -->
         <div class="row">
-        <div class="input-field col s6">
-            <input value="{{ reviews.game_name }}" placeholder="Game Name" id="game_name" name="game_name"
-                class="input-bg" type="text" class="validate" required>
-        </div>
+            <div class="input-field col s6">
+                <input value="{{ reviews.game_name }}" placeholder="Game Name" id="game_name" name="game_name"
+                    class="input-bg" type="text" class="validate" required>
+            </div>
 
-        <!-- console type (dropdown) -->
+            <!-- console type (dropdown) -->
             <div class="input-field col s12 m6">
                 <select id="console_type" name="console_type" class="icons validate" required>
-                    <option value="" disabled>Select Console</option>
+                    <option value="" class="left" disabled>Select Console</option>
                     {% for con in console %}
                         {% if con.console_type == reviews.console_type %}
-                        <option value="{{ con.console_type }}">
-                            {{ con.console_type }}
-                        </option>
+                            <option value="{{ con.console_type }}">
+                                {{ con.console_type }}
+                            </option>
                         {% else %}
-                        <option value="{{ con.console_type }}">
-                            {{ con.console_type }}
-                        </option>
+                            <option value="{{ con.console_type }}">
+                                {{ con.console_type }}
+                            </option>
                         {% endif %}
                     {% endfor %}
                 </select>
             </div>
+
         </div>
 
         <!-- Category dropdown -->
         <div class="row">
             <div class="input-field col s12">
                 <select id="category_name" name="category_name" class="icons validate" required>
-                    <option value="" disabled>Select Console</option>
+                    <option value="" class="left" disabled>Select Console</option>
                     {% for category in categories %}
                         {% if category.category_name == reviews.category_type %}
                             <option value="{{ category.category_name }}">
