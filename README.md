@@ -248,7 +248,7 @@ Achieving user stories:
 
 ## Deployment
 
-## Project Creation
+### Project Creation
 
 - This project was created through GitHub: 
  1. Locating repository, clicking on the "New" button.
