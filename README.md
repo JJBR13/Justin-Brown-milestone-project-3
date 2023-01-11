@@ -51,15 +51,18 @@ The idea behind this website demonstrates 'CRUD' functionality. This site allows
 * Being a first-time user, I want the sign-up process to be smooth and available.
 * Being a first-time user, I want to be able to search existing reviews.
 * Being a first-time user, I want to see a clear business & brand identity. 
+* Being a first-time user, I want to be able to add my first review. 
 
 ### The Regular User
 
-* Being a Regular user, I want the login button easily accessible.
+* Being a Regular user, I want the login page easily accessible.
+* Being a Regular user, I want a logout feature to secure my profile.
 * Being a Regular user, I want to be able to add new reviews easily.
-* Being a Regular user, I want to be able to edit my reviews in case of typo.
+* Being a Regular user, I want to be able to edit my reviews in case of typos.
 * Being a Regular user, I want to be able to delete my reviews.
-* Being a Regular user, I want would like to search other gamers' reviews. 
+* Being a Regular user, I would like to search and view other gamers' reviews. 
 * Being a Regular user, I want like to contact the admin if I encounter any issues.
+* Being a Regular user, I want to use the service on multiple devices. 
 
 ## Design 
 
@@ -91,37 +94,112 @@ The idea behind this website demonstrates 'CRUD' functionality. This site allows
 
 ### Favicon 
 
+![ADD Favicon snip](#)
 
+-  A site-wide favicon of the site logo was created, this allows the user to easily identify the site when multiple are open. Helping to achieve user stories:
+
+> i. Being a first-time user, I want an easy-navigating site.
+> ii Being a first-time user, I want to see a clear business & brand identity.
 
 ### Banner 
 
+- Throughout the whole site located in the header, is a banner. This purpose is to create a modern feel and provide consistency site-wide. Further aiding user stories:
+
+> i. Being a first-time user, I want an easy-navigating site.
+> ii Being a first-time user, I want to see a clear business & brand identity.
+
 ### Navbar
+
+- A Navbar is located site-wide, in the same fashion on all pages, it contains a dropdown menu for additional pages when the user is logged in. On mobile it collapses into a burger menu, allowing the user to access the site on a range of devices. Complying with user stories:
+
+> i. Being a first-time user, I want an easy-navigating site.
+> ii. Being a Regular user, I want to use the service on multiple devices. 
 
 ### Pages 
 
 #### Home 
 
+- Landing on the site this is the first page the user see's the user has minimal page access, (home, reviews, contact, sign up and login). The body of the page displays a search bar, this allows any user signed up or not to browse all game reviews on the site. Creating user relevance: 
+
+> i. Being a first-time user, I want an easy-navigating site. 
+> ii. Being a first-time user, I want to be able to search existing reviews.
+> iii. Being a Regular user, I would like to search and view other gamers' reviews.  
+
 #### Reviews
+
+- This displays all reviews from the database from all users. Located on each review is a read more button, which enables the reader to read the review in its entirety. After you have read the review there are buttons to go back to reviews or back to the top to read elements of the review again. This encapsulates user stories: 
+
+> i. Being a first-time user, I want an easy-navigating site.
+> ii. Being a Regular user, I would like to search and view other gamers' reviews. 
 
 #### Contact 
 
+- This page displays a simple contact form for the user to fill out if they ever haAchievingssues, to get incontact with admin to resolve. Achiving user story: 
+
+> i. Being a Regular user, I want like to contact the admin if I encounter any issues.
+
 #### Sign Up
 
-#### Account 
+- This is where a new user can sign up to start contributing reviews. They have to complete the form. The feature of this form, create a gamer id, if it already exists a message displays explaining the issue and comes up with a new gamer id. 
+
+- When the user has a unique gamer id and has entered their desired password. They will be directed to their account page, displaying a message at the top of the page saying registration is successful. Acheving user stories:
+
+> i. Being a first-time user, I want the sign-up process to be smooth and available.
 
 #### Login 
 
+- Displays a simple form input, the user has to input their gamer id and password, and this then gets checked against the database. Of the user is correct and the password matches the user is logged on and redirected to their account page. Once login is complete this allows the user to see the dropdown feature in the header element displaying: the account, add a review and logout Achieving user stories: 
+
+> i. Being a Regular user, I want the login page easily accessible.
+> ii. Being a Regular user, I want to be able to add new reviews easily.
+
+#### Account 
+
+- After signing up the user gets redirected to this page, once here they can start adding reviews from the new dropdown feature in the navbar. 
+
+- If you are a returning user, then has already generated reviews you can see all your reviews on this page, and allows you to edit, delete and create further reviews. Helping improve user stories:
+
+> i. Being a first-time user, I want to be able to add my first review.
+> ii. Being a Regular user, I want to be able to add new reviews easily.
+> iii. Being a Regular user, I want to be able to edit my reviews in case of typos.
+> iV. Being a Regular user, I want to be able to delete my reviews.
+
 #### 404 Error page
+
+- This error page will display when the user clicks on a page that no longer exists and redirect the user via a button to the home page. Aiding to user story: 
+
+> i. Being a first-time user, I want an easy-navigating site. 
 
 ### Logout functionality
 
+- Once a user is logged in the dropdown menu displays the logout button. This allows the user to end their session and returns them to the home page with a relevant message of completion. 
+
+> i. Being a Regular user, I want a logout feature to secure my profile.
+
 ### Add review
 
-### Edit Review 
+- This page is displayed when the user is logged in. A form to fill out with content about the game the user is reviewing: game name, select console, choose a category, and review content. With a submit review button that will post your review to the site. Once the review is submitted, it redirects the user to the home page, with a relevant message of success. This backs up the user story: 
 
-### Delete Review 
+> i. Being a Regular user, I want to be able to add new reviews easily.
+
+### Edit/ Delete Review 
+
+- When on the account page you can see reviews made by the user in session. Here is an edit and delete button show, this therefore only allows the user to edit and delete the reviews they have created. 
+
+- The edit button redirects the user to the desired review, pre-populated with the review information. There is a cancel and save button. The cancel button takes the user back to the account page, without any changes to the review. The save button saves any new changes and also redirects to the account page, with a relevant message saying it has been achieved. 
+
+- If the delete button is pressed, a module pops up and asks the user if they are sure they want to delete the review. To buttons display, cancel, and delete. Both these buttons redirect to the account page, however when the user presses the delete button it displays a message confirming the deletion. 
+
+Achieving user stories: 
+> i. Being a Regular user, I want to be able to edit my reviews in case of typos.
+> ii. Being a Regular user, I want to be able to delete my reviews.
 
 ### Footer 
+
+- Site-Wide is a footer this includes copywriting information. likes to all site pages and the company's logo, which when clicked takes the user to the home page. This enhances user stories: 
+
+> i. Being a first-time user, I want an easy-navigating site.
+> ii. Being a first-time user, I want to see a clear business & brand identity. 
 
 ### Other Features 
 
