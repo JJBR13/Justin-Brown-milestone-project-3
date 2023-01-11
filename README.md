@@ -29,7 +29,7 @@ DISCLAIMER: This is a project for Code Institute, to demonstrate understanding o
 - [Testing](#testing)
 - [Deployment](#depolyment)
     + [Project Creation](#project-creation)
-    + [GitHub Pages](#github-pages)
+    + [Heroku](#heroku)
     + [Local Deployment](#local-deployment)
 - [References, Credit, Framework & Programs](#references-credit-framework--programs)
     + [References](#references)
@@ -235,6 +235,72 @@ Achieving user stories:
 
 - Allow the user to add new categories to the database when adding a review or editing a review.
 
+## Languages Used
+
+- [HTML5](https://www.w3schools.com/whatis/whatis_html.asp)
+- [CSS3](https://www.w3schools.com/whatis/whatis_css.asp)
+- [JavaScript](https://www.w3schools.com/whatis/whatis_js.asp)
+- [Python](https://www.python.org/doc/)
+
+## Testing
+
+- Please see [TEST.md](TEST.md) for a breakdown of website testing and debugging.
+
+## Deployment
+
+## Project Creation
+
+- This project was created through GitHub: 
+ 1. Locating repository, clicking on the "New" button.
+ 2. Selecting the relevant template:  "Code-Institute-Org/gitpod-full-template" 
+ 3. Adding the repository name "JJustin-Brown-milestone-project-two".
+ 4. Clicking the button "Create repository". 
+
+- Adding the Chrome extension "GitPod" created an online coding platform, enabling the use of bash terminals throughout the project. The below "git commands" were used: 
+
+1. git add . - This command for multiple files to the staging area before commiting. 
+2. git commit -m "Message explaining upadate" - This command explained changes that were done to the repository. 
+3. git push - This command was used to push all committed changes to the GitHub Repository. 
+
+### Heroku
+
+- To deploy project live in Heroku the following steps were taken: 
+
+1. Go to [Heroku Web app](https://dashboard.heroku.com/apps) 
+2. Click new button
+3. Select create new app 
+4. Create name
+5. Select location
+6. Press create app
+
+#### Contect Heroku to GitHub
+
+1. Click deploy tab, select GitHub. Connect to GitHub. 
+2. Type repository into search bar
+3. Once repository has been found, click th econnect button. 
+
+#### Set Environment Variables 
+1. Click setting tab and click the Reveal Config vars button. 
+2. Add following information: 
+    - key: IP, value: 0.0.0.0
+    - key: PORT, value: 5000
+    - key: MONGO_DBNAME, value: (database name you want to connect to)
+    - key: MONGO_URI, value: (located in MongoDb  by going to cluster --> connect --> connect to application, and copying the  
+      link adding in your database name and password)
+    - key: SECRET_KEY, value: (this is a custom secrete key set up for configuration to keep user sessions secure)
+
+#### Activate Automatic Deployment
+1. Click the Deploy tab.
+2. In the automatic deploys section, select the branch you want to deploy. 
+3. Select Enable Automation.
+
+### Local Deployment
+
+1. Navigate to the [Github](https://github.com/JJBR13/Justin-Brown-milestone-project-two).
+2. Click the "Code" dropdown button. 
+3. Select "Download ZIP" or " Open with GitHub Desktop"
+4. Unpackage ZIP file locally with Integrated Development Environment (IDE).
+
 ## References, Credit, Frameworks & Programs
 
 ### References
@@ -247,6 +313,9 @@ Achieving user stories:
 
 - [GitHub](https://docs.github.com/en/get-started): 
     - Was used to store the project.
+
+- [RandomKeygen](https://randomkeygen.com/)
+    - used to generated a random secrete key.
 
 - [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/): 
     - Used to inspect site pages and there elements to help debug issues with layouts and try differnt CSS styles.
