@@ -1,88 +1,97 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- My Reviews -->
+<section class="container">
+    <div>
+        <h1 class="center-align header-text">Edit Review</h1>
+    </div>
 
-<div class="col s12 m8 offset-m2 p-b">
-    <h3 class="center-align header-text">Edit Reviews</h3>
-</div>
+    <div class="section class">
+        <form class="col s12" method="POST" action="{{ url_for('add_review') }}">
 
-<div class="row card-pannel">
-    <form class="col s12" method="POST" action="{{ url_for('edit_review', reviews_id=reviews._id) }}">
+            <div class="row">
 
-        <!-- Game Name -->
-        <div class="row">
-            <div class="input-field col s6">
-                <input value="{{ reviews.game_name }}" placeholder="Game Name" id="game_name" name="game_name"
-                    class="input-bg" type="text" class="validate" required>
-            </div>
+                <!-- Game Name -->
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <label for="game_name" class="hide">Game Name</label>
+                        <input value="{{ reviews.game_name }}" placeholder="Game Name" id="game_name" name="game_name"
+                        class="input-bg" type="text" class="validate" required>
+                    </div>
 
-            <!-- console type (dropdown) -->
-            <div class="input-field col s12 m6">
-                <select id="console_type" name="console_type" class="icons validate" required>
-                    <option value="" class="left" disabled>Select Console</option>
-                    {% for con in console %}
-                        {% if con.console_type == reviews.console_type %}
-                            <option value="{{ con.console_type }}">
-                                {{ con.console_type }}
-                            </option>
-                        {% else %}
-                            <option value="{{ con.console_type }}">
-                                {{ con.console_type }}
-                            </option>
-                        {% endif %}
-                    {% endfor %}
-                </select>
-            </div>
 
-        </div>
+                    <!-- console type (dropdown) -->
+                    <div class="input-field col s12 l6">
+                        <select id="console_type" name="console_type" class="icons validate" required>
+                            <label for="console_type" class="hide">Console Type</label>
+                            <option value="" class="left" disabled>Select Console</option>
+                                {% for con in console %}
+                                    {% if con.console_type == reviews.console_type %}
+                                        <option value="{{ con.console_type }}">
+                                            {{ con.console_type }}
+                                        </option>
+                                    {% else %}
+                                        <option value="{{ con.console_type }}">
+                                            {{ con.console_type }}
+                                        </option>
+                                    {% endif %}
+                                {% endfor %}
+                        </select>
+                    </div>
+                </div>
 
-        <!-- Category dropdown -->
-        <div class="row">
-            <div class="input-field col s12">
-                <select id="category_name" name="category_name" class="icons validate" required>
-                    <option value="" class="left" disabled>Select Console</option>
-                    {% for category in categories %}
-                        {% if category.category_name == reviews.category_type %}
-                            <option value="{{ category.category_name }}">
-                                {{ category.category_name }}
-                            </option>
-                        {% else %}
-                            <option value="{{ category.category_name }}">
-                                {{ category.category_name }}
-                            </option>
-                        {% endif %}
-                    {% endfor %}
-                </select>
-            </div>
-        </div>
+                <!-- Category dropdown -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select id="category_name" name="category_name" class="icons validate" required>
+                            <label for="review_content" class="hide">Review Content</label>
+                            <option value="" class="left" disabled>Select Console</option>
+                            {% for category in categories %}
+                                {% if category.category_name == reviews.category_type %}
+                                    <option value="{{ category.category_name }}">
+                                        {{ category.category_name }}
+                                    </option>
+                                {% else %}
+                                    <option value="{{ category.category_name }}">
+                                        {{ category.category_name }}
+                                    </option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
 
-        <!-- Review content -->
-        <div class="row">
-            <div class="input-field col s12">
-                <textarea id="review_content" name="review_content" placeholder="Type Review Here"
-                    class="materialize-textarea">
-                    {{- reviews.review_content -}}
-                    </textarea>
-            </div>
-        </div>
+                <!-- Review content -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label for="review_content" class="hide">Review Content</label>
+                        <textarea id="review_content" name="review_content" placeholder="Type Review Here"
+                            class="materialize-textarea">
+                            {{- reviews.review_content -}}
+                        </textarea>
+                    </div>
+                </div>
+        
 
-        <!-- Save & Cancel btn -->
-        <div class="row">
-            <div class="col s2">
-            </div>
+            <!-- Save & Cancel btn -->
+            <div class="row">
+                <div class="col s2">
+                </div>
 
-            <div class="col s8">
-                <div class="modal-footer center">
-                    <a href="#" class="btn-small cancel-btn">Cancel</a>
-                    <button type="submit" class="btn-small save-btn">Save</button>
+                <div class="col s8">
+                    <div class="modal-footer center">
+                        <a href="#" class="btn-small cancel-btn">Cancel</a>
+                        <button type="submit" class="btn-small save-btn">Save</button>
+                    </div>
+                </div>
+
+                <div class="col s2">
                 </div>
             </div>
 
-            <div class="col s2">
             </div>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
+</section>
 
 {% endblock %}

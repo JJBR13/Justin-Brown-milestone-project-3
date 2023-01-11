@@ -2,11 +2,11 @@
 {% block content %}
 
 <div class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
-    <h3 class="center-align header-text">
+    <h1 class="center-align header-text">
         <i class="fa-solid fa-user"></i>
         <br>
         {{ gamer_id }}
-    </h3>
+    </h1>
 </div>
 
 {% for r in reviews %}
@@ -47,7 +47,7 @@
                         </div>
                         <div class="col s4">
                             <a href="{{ url_for('edit_review', reviews_id=review._id) }}" class="btn-small edit-btn">Edit</a>
-                            <a href="#modal-delete-{{review._id}}" class="delete-btn btn red modal-trigger">Delete</a>
+                            <a href="#modal-delete-{{review._id}}" class="delete-btn red btn modal-trigger"><span id="text-d-btn">Delete</span></a>
                         </div>
                         <!-- Confirmation deletion Modal -->
                         <div id="modal-delete-{{review._id}}" class="modal shadow p-t">
@@ -57,7 +57,7 @@
                             </div>
                             <div class="modal-footer center-align">
                                 <a href="{{ url_for('delete_review', reviews_id=review._id) }}"
-                                    class="delete-btn btn red modal-trigger modal-close">Delete</a>
+                                    class="delete-btn btn red modal-trigger modal-close"><span id="text-d-btn">Delete</span></a>
                                 <a href="#" class="modal-close waves-effect waves-green btn-flat blue-shadow">Cancel</a>
                             </div>
                         </div>
