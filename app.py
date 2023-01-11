@@ -134,9 +134,7 @@ def account(gamer_id):
         {"gamer_id": session["gamer"]})["gamer_id"]
 
     if session['gamer']:
-
         reviews = mongo.db.reviews.find({"uploaded_by": session["gamer"]})
-        
         return render_template(
             "account.html", gamer_id=gamer_id, reviews=reviews)
 
@@ -204,7 +202,8 @@ def edit_review(reviews_id):
     reviews = mongo.db.reviews.find_one({"_id": ObjectId(reviews_id)})
     console = mongo.db.console.find().sort("console_type", 1)
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_review.html", reviews=reviews, console=console, categories=categories)
+    return render_template(
+        "edit_review.html", reviews=reviews, console=console, categories=categories)
 
 
 @app.route("/delete_review/<reviews_id>")
@@ -258,6 +257,15 @@ def not_found(error):
     """
     # Redirect for route handle error
     return render_template('404.html', error=error), 404
+
+
+@app.errorhandler(500)
+def not_found(error):
+    """
+    Returns 505.html, if server error is present.
+    """
+    # Redirect for route handle error
+    return render_template('505.html', error=error), 505
 
 
 if __name__ == "__main__":
