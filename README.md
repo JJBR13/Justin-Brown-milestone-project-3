@@ -50,6 +50,7 @@ The idea behind this website demonstrates 'CRUD' functionality. This site allows
 * Being a first-time user, I want an easy-navigating site. 
 * Being a first-time user, I want the sign-up process to be smooth and available.
 * Being a first-time user, I want to be able to search existing reviews.
+* Being a first-time user, I want to see a clear business & brand identity. 
 
 ### The Regular User
 
@@ -89,6 +90,8 @@ The idea behind this website demonstrates 'CRUD' functionality. This site allows
 ## Current Features
 
 ### Favicon 
+
+
 
 ### Banner 
 
@@ -130,16 +133,32 @@ The idea behind this website demonstrates 'CRUD' functionality. This site allows
 
 ### References
 
+- [MongoDB](https://www.mongodb.com/): 
+    - The project database is stored in MongoDB.
+
+- [Git](https://git-scm.com/): 
+    - Used for version conterol.
+
+- [GitHub](https://docs.github.com/en/get-started): 
+    - Was used to store the project.
+
+- [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/): 
+    - Used to inspect site pages and there elements to help debug issues with layouts and try differnt CSS styles.
+
 - [Canva.com](https://www.canva.com/colors/color-palettes/sweet-succulents/)
     - Used to gauge simplistic pallets for design.
 
 - [Fotor](https://www.fotor.com/design/project/cdc12d1d-ad35-48ac-8e90-24a5eeea1f81/template)
     - Used to create the header banner.  
+
 - [Hex to RGBA Converter](https://rgbacolorpicker.com/)
     - Used to convert hex to rgba.
 
 - [Google Fonts](https://fonts.google.com/) 
     - Used to import fonts into style.css. 
+
+- [Font Awesome](https://fontawesome.com/): 
+    - All icons used for the site.
 
 ### Credit 
 
@@ -154,14 +173,26 @@ The idea behind this website demonstrates 'CRUD' functionality. This site allows
     
 ### Frameworks 
 
-- [Font Awesome](https://fontawesome.com/): 
-    - All icons used for the site.
+- [Pymongo](https://pypi.org/project/pymongo/): 
+    - Used as the Python API for MongoDB, to link to fronend aplication. 
+
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/): 
+    - Through out the project Flask is used, which is a Python Microframework. 
+
+- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/): 
+    - In addition with Flask in HTML code. Enables simple linking between frontend and backend.
+
+- [Heroku](https://id.heroku.com/login): 
+    - Used as hosting platform to deploy the project.
+
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/): 
+    - To secure user password through hashing.
 
 - [Materialize](https://materializecss.com/): 
     - Was the framework used for the structure of the whole site. 
 
 - [jquery](https://releases.jquery.com/) 
-    - Used to aid along side Materialize, for interactive elements. 
+    - Used to aid alongside Materialize, for interactive elements. 
 
 ### Programs 
 
