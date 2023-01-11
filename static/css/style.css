@@ -25,7 +25,7 @@ body {
     padding-top: 2%;
 }
 
-.m-r {
+.m-t {
     margin-top: 2%;
 }
 
@@ -157,7 +157,7 @@ nav.nav-center ul li a {
 }
 /* -------------------------------------- Footer*/
 
-#footer-logo {
+#footer-logo, .error-logo {
     height: 100px;
     width: 100px;
 }

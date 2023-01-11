@@ -2,37 +2,69 @@
 {% block content %}
 
 <div>
-    <h3 class="center-align header-text">All Reviews</h3>
+    <h3 class="center-align header-text p-b">All Reviews</h3>
 </div>
 
-<div class="row center-align card-margin">
-    {% for review in reviews %}
-    <div class="col s6">
-        <div class="card-panel shadow">
-            <!-- Game Name-->
-            <div class="center-align">
-                <h3 id="r-heading">{{ review.game_name }}</h3>
-            </div>
-
-            <!-- Review by -->
-            <div class="center-align">
-                <h3 id="gamer-head">{{ review.uploaded_by }}</h3>
-            </div>
-
-            <!-- Category-->
-            <div class="col s12 p-b">
-                <p><strong>{{ review.console_type }}</strong></p>
-            </div>
-
+<!-- Search bar -->
+<div class="row search">
+    <form action="{{ url_for('search') }}" method="POST" class="col s12">
+        <div class="row center-align">
             <div class="row">
-                <!-- Review content -->
-                <div class="col s12">
-                    {{ review.review_content|truncate(120, true, '') }}
-                    <a  id="read_more" href="{{ url_for('read_more', reviews_id=review._id) }}">read more</a>
+                <div class="col s12 l4">
+                </div>
+                <div class="col s12 l4">
+                    <input type="text" name="query" id="query" minlength="2" class="validate blue-shadow" placeholder="Search"
+                        required>
+                </div>
+                <!-- Search btn -->
+                <div class="div col s12 l1">
+                    <button type="submit" class="blue-shadow right">Search</button>
+                </div>
+                <div class="div col s12 l1">
+                    <a href="{{ url_for('import_reviews') }}" class="btn shadow left">Reset</a>
                 </div>
             </div>
         </div>
-    </div>
-    {% endfor %}
+    </form>
 </div>
+
+</div>
+
+{% for r in reviews %}
+    <!-- Review Card -->
+    <div class="row center-align card-margin">
+        {% for review in reviews %}
+        <div class="col s6">
+            <div class="card-panel shadow">
+                <!-- Game Name-->
+                <div class="center-align">
+                    <h3 id="r-heading">{{ review.game_name }}</h3>
+                </div>
+
+                <!-- Review by -->
+                <div class="center-align">
+                    <h3 id="gamer-head">{{ review.uploaded_by }}</h3>
+                </div>
+
+                <!-- Category-->
+                <div class="col s12 p-b">
+                    <p><strong>{{ review.console_type }}</strong></p>
+                </div>
+
+                <div class="row">
+                    <!-- Review content -->
+                    <div class="col s12">
+                        {{ review.review_content|truncate(120, true, '') }}
+                        <a  id="read_more" href="{{ url_for('read_more', reviews_id=review._id) }}">read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% else %}
+<div class="p-t p-b">
+    <p class="red-text text-darken-4 center-align">No Results Found</p>
+</div>
+{% endfor %}
 {% endblock %}
