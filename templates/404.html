@@ -20,8 +20,9 @@
 
 
       <!-- Error Content -->
-      <div class="row center-align">
+      <div class="row center-align valign-wrapper">
         <div class="col s12">
+            <a href="{{ url_for('home') }}"><img id="footer-logo" class="p-t" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"></a>
             <p>404 ERROR - Sorry Page Not Found</p>
             <p>whoops, it looks like you are looking for a page that not exist. </p>
             <p>To return to the home page, please <a href="{{ url_for('home') }}">click here</a></p>
