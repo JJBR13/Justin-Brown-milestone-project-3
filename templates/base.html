@@ -58,6 +58,7 @@
     <ul class="sidenav right" id="mobile-demo">
       <li><a href="{{ url_for('home') }}">Home</a></li>
       <li><a href="{{ url_for('import_reviews') }}" class="nav-header">Reviews</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact</a></li>
       {% if session.gamer %}
         <li><a href="{{ url_for('account', gamer_id=session['gamer']) }}">Account</a></li>
         <li><a href="{{ url_for('add_review') }}" class="nav-header">Add review</a></li>
@@ -65,7 +66,6 @@
       {% else %}
         <li><a href="{{ url_for('sign_up') }}">Sign up</a></li>
         <li><a href="{{ url_for('login') }}">Login</a></li>
-        <li><a href="{{ url_for('contact') }}">Contact</a></li>
       {% endif %}
     </ul>
   </header>
@@ -91,13 +91,13 @@
   <footer class="page-footer">
     <div>
       <div class="row center-align">
-        <div class="col s2">
+        <div class="col s12 l2">
           <a href="{{ url_for('home') }}"><img id="footer-logo" class="p-t" src="{{ url_for('static', filename='images/logo.png') }}" alt="Site logo"></a>
         </div>
 
-        <div class="col s10">
+        <div class="col s10 offset-s2 l10">
           <nav class="no-box-shadow">
-          <ul class="right m-r">
+          <ul class="right">
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('import_reviews') }}">Reviews</a></li>
             <li><a href="{{ url_for('contact') }}">Contact</a></li>

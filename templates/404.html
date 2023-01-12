@@ -18,7 +18,7 @@
 
     <!-- logo -->
     <div class="row center-align">
-        <div class="div col s12">
+        <div class="div col s10 offset-s1">
             <a href="{{ url_for('home') }}"><img 
                     src="{{ url_for('static', filename='images/error_logo.png') }}" alt="site logo"></a>
         </div>
@@ -26,7 +26,7 @@
 
     <!-- Error Content -->
     <div class="row center-align valign-wrapper p-t">
-        <div class="col s12">
+        <div class="col s10 offset-s1">
             <p>404 ERROR - Sorry Page Not Found</p>
             <p>whoops, it looks like you are looking for a page that not exist.</p>
             <p>To return to the home page, please <a href="{{ url_for('home') }}">click here</a></p>

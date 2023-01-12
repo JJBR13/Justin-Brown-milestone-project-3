@@ -1,19 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
-<section class="container">
-    <div>
-        <h1 class="center-align header-text">Edit Review</h1>
-    </div>
-        <form class="col s12" method="POST" action="{{ url_for('add_review') }}">
-            <div class="row">
+<div>
+    <h1 class="center-align header-text">Edit Review</h1>
+</div>
 
+<section class="container">
+    <div class="row">
+        <form class="col s10 offset-s1" method="POST" action="{{ url_for('add_review') }}">
+            <div class="row">
                 <!-- Game Name -->
                 <div class="row">
                     <div class="input-field col s12 l6">
                         <label for="game_name" class="hide">Game Name</label>
                         <input value="{{ reviews.game_name }}" placeholder="Game Name" id="game_name" name="game_name"
-                        class="input-bg" type="text" class="validate" required>
+                            class="input-bg" type="text" class="validate" required>
                     </div>
 
 
@@ -22,17 +23,17 @@
                         <select id="console_type" name="console_type" class="icons validate" required>
                             <label for="console_type" class="hide">Console Type</label>
                             <option value="" class="left" disabled>Select Console</option>
-                                {% for con in console %}
-                                    {% if con.console_type == reviews.console_type %}
-                                        <option value="{{ con.console_type }}">
-                                            {{ con.console_type }}
-                                        </option>
-                                    {% else %}
-                                        <option value="{{ con.console_type }}">
-                                            {{ con.console_type }}
-                                        </option>
-                                    {% endif %}
-                                {% endfor %}
+                            {% for con in console %}
+                                {% if con.console_type == reviews.console_type %}
+                                    <option value="{{ con.console_type }}">
+                                        {{ con.console_type }}
+                                    </option>
+                                {% else %}
+                                    <option value="{{ con.console_type }}">
+                                        {{ con.console_type }}
+                                    </option>
+                                {% endif %}
+                            {% endfor %}
                         </select>
                     </div>
                 </div>
@@ -68,24 +69,18 @@
                         </textarea>
                     </div>
                 </div>
-        
 
-            <!-- Save & Cancel btn -->
-            <div class="row">
-                <div class="col s2">
-                </div>
-
-                <div class="col s8">
+                <!-- Save & Cancel btn -->
+                <div class="col s8 offset-s2">
                     <div class="modal-footer center">
                         <a href="#" class="btn-small cancel-btn">Cancel</a>
                         <button type="submit" class="btn-small save-btn">Save</button>
                     </div>
                 </div>
 
-                <div class="col s2">
-                </div>
             </div>
         </form>
+    </div>
 </section>
 
 {% endblock %}
