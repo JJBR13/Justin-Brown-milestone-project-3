@@ -148,6 +148,18 @@ nav.nav-center ul li a {
     font-size: 35px;
 }
 
+.card {
+    background-color: rgba(91, 92, 80,0.5);
+}
+
+.step {
+    font-size: 20px;
+}
+
+.card .card-title {
+    font-size: 22px;
+    font-weight: 300;
+}
 /* -------------------------------------- Footer*/
 
 #footer-logo {
