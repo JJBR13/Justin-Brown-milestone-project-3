@@ -149,11 +149,16 @@ nav.nav-center ul li a {
 }
 
 .card {
-    background-color: rgba(91, 92, 80,0.5);
+    background-color: #E4DCC0;
 }
 
-.step {
+.card-content, div p {
+    color: #5B5C50;
+}
+
+div i, .step {
     font-size: 20px;
+    color: #5B5C50;
 }
 
 .card .card-title {
