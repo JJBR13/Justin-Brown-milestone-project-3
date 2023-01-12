@@ -134,7 +134,7 @@ The idea behind this website demonstrates 'CRUD' functionality. This site allows
 
 #### Contact 
 
-- This page displays a simple contact form for the user to fill out if they ever haAchievingssues, to get incontact with admin to resolve. Achiving user story: 
+- This page displays a simple contact form for the user to fill out if they ever have an issue, to get in contact with admin to resolve it, using email.js functionality. Achieving user story: 
 
 > i. Being a Regular user, I want like to contact the admin if I encounter any issues.
 
@@ -164,7 +164,7 @@ The idea behind this website demonstrates 'CRUD' functionality. This site allows
 > iii. Being a Regular user, I want to be able to edit my reviews in case of typos.
 > iV. Being a Regular user, I want to be able to delete my reviews.
 
-#### 404 Error page
+#### 404/505 Error page
 
 - This error page will display when the user clicks on a page that no longer exists and redirect the user via a button to the home page. Aiding to user story: 
 
@@ -335,6 +335,9 @@ Achieving user stories:
 - [Font Awesome](https://fontawesome.com/): 
     - All icons used for the site.
 
+- [Emailjs](https://www.emailjs.com/): 
+    - Used for a contact form on contact.html
+
 ### Credit 
 
 - [stack Overflow](https://stackoverflow.com/questions/50687845/jinja-how-to-force-truncate-when-value-exceeds-specified-field-width)
@@ -345,6 +348,9 @@ Achieving user stories:
 
 - [w3school](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp): 
     - Back to top button js function code.
+
+[Code Institute](https://codeinstitute.net/): 
+    - For all the lecture/ learning content provided. 
     
 ### Frameworks 
 

@@ -2,12 +2,14 @@
 {% block content %}
 
 <div class="row">
-    <form class="col s12 m8 offset-m2">
-
+    <form id="contact_form" class="col s12 m8 offset-m2" onsubmit="return sendMail(this);">
         <div class="row">
-
             <div>
                 <h1 class="center-align header-text">Contact Now</h1>
+            </div>
+
+            <!-- Submission reponse -->
+            <div id="response" class="center-align p-b">
             </div>
 
             <!-- Name -->
@@ -32,19 +34,28 @@
             <div class="row">
                 <div class="input-field col s12">
                     <label for="message_content" class="label-form">Type message below:</label>
-                    <textarea id="message_content" name="message_content" class="materialize-textarea"></textarea>
+                    <textarea id="message_content" name="message_content" class="materialize-textarea" required></textarea>
                 </div>
             </div>
 
             <!-- Submit btn -->
             <div class="col s12 center-align">
-                <button class="btn waves-effect waves-light sub-btn" type="submit">
+                <button id="send_btn" class="btn waves-effect waves-light sub-btn" type="submit">
                     Send Message
                 </button>
             </div>
         </div>
-
     </form>
 </div>
+
+<!-- Jsdelivr script -->
+<script src="static/js/email.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+    emailjs.init("MH6RI5ZX8w-9dnuOs");
+    })();
+    </script>
 
 {% endblock %}
