@@ -205,11 +205,30 @@ Achieving user stories:
 
 - This feature is located after clicking the read more link on the reviews. It allows the user after reading the review to go back to the top. 
 
+### Responsive On All Devices
+
+- Escape Gaming Reviews, is made easily accessible on all devices with help from the Materialize framework. Test through Google Developer Tools, on devices: 
+    - iPhone SE
+    - iPhone XR
+    - Pixel 5
+    - Samsung S8+
+    - iPad Mini
+    - iPad Air 
+
+- The site was also tested for full responsive functionality manually on the below devices: 
+    - Razor Blade 15 
+    - Galaxy Fold Z3
+    - ASUS ZenScreen 
+
+- Enabling the site to function seamlessly across a range of devices, coincides with the user story: 
+
+> i. Being a Regular user, I want to use the service on multiple devices. 
+
 ## Future Release
 
 ### 1) Create Admin Account
 
-- This would allow the admin to monitor reviews and remove & message users that have inapropriate reviews on the site. 
+- This would allow the admin to monitor reviews and remove & message users that have inappropriate reviews on the site. 
 
 ### 2) Filter Buttons
 
