@@ -1,21 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
+<form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
     <h1 class="center-align header-text">
         <i class="fa-solid fa-user"></i>
         <br>
         {{ gamer_id }}
     </h1>
-</div>
+</form>
 
 {% for r in reviews %}
     <!-- Shows when user HAS reviews -->
 
     <!-- My Reviews -->
-    <div class="col s12 m8 offset-m2 p-b" method="POST" action="{{ url_for('login') }}">
+    <form class="col s12 m8 offset-m2 p-b" method="POST" action="{{ url_for('login') }}">
         <h3 class="header-text-blue my-review">My Reviews</h3>
-    </div>
+    </form>
 
     <!-- Display Review Template -->
     <div class="row center-align card-margin">
