@@ -16,25 +16,25 @@ DISCLAIMER: This is a project for Code Institute, to demonstrate an understandin
 ## Contents 
 
 - [Ideology](#ideology)
-- [User Experience](#user-eperience)
-    + [User Stories](#user-stroies)
+- [User Experience](#user-experience)
+    + [User Stories](#user-stories)
 - [Design](#design)
     + [Wireframes](#wireframes)
-    + [Colour Palette](#colour-palette)
+    + [Colour Palette](#colour-pallete)
     + [Typography](#typography)
 - [Current Features](#current-features)
     + [Responsive On All Devices](#responsive-on-all-devices)
 - [Future Releases](#future-releases)
 - [Languages Used](#languages-used)
 - [Testing](#testing)
-- [Deployment](#depolyment)
+- [Deployment](#deployment)
     + [Project Creation](#project-creation)
     + [Heroku](#heroku)
     + [Local Deployment](#local-deployment)
-- [References, Credit, Framework & Programs](#references-credit-framework--programs)
+- [References, Credit, Frameworks & Programs](#references-credit-frameworks-programs)
     + [References](#references)
     + [Credit](#credit)
-    + [Framework](#framework)
+    + [Frameworks](#frameworks)
     + [Programs](#programs)
 
 ## Ideology
@@ -224,7 +224,7 @@ Achieving user stories:
 
 > i. Being a Regular user, I want to use the service on multiple devices. 
 
-## Future Release
+## Future Releases
 
 ### 1) Create Admin Account
 
