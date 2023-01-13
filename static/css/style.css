@@ -127,6 +127,10 @@ input[type=text]:not(.browser-default), input[type=password]:not(.browser-defaul
     padding: 14px 16px;
 }
 
+.fa-bars:before, .fa-navicon:before {
+    color: white;
+}
+
 /* --------------------------------------- index.html */
 
 nav.nav-center ul {
@@ -321,13 +325,8 @@ textarea.materialize-textarea {
 
 /* Mobile */
 
-@media(min-width: 320px) {
-    #heroblock {
+@media screen and (max-width: 600px) {
+    #hero-block {
         height: 20vh;
-        background: url(../images/banner.webp) no-repeat center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
     }
 }
