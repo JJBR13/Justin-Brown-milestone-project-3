@@ -17,7 +17,7 @@ Testing was done site-wide, all tests undertaken are shown below:
 - [Colour Contrast](#colour-contrast)
 - [Browser Compatibility](#browser-compatibility)
 - [Responsivity](#responsivity)
-- [Issues/ Bugs Found & Resolved](#issues-bugs-found--resolved)
+- [Issues/ Bugs Found & Resolved](#issues-bugs-found-resolved)
 
 ## Functional Testing 
 
@@ -90,14 +90,6 @@ Testing was done site-wide, all tests undertaken are shown below:
 
 - All tested devices were consistent across browsers.
 
-## Browser Compatibility 
-
-- This site was tested on Chrome, Microsoft Edge, and Firefox on desktop.
-
-- The website was tested in Chrome on mobile and tablet. 
-
-- All tested devices were consistent across browsers.
-
 ## Responsivity
 
 - Escape Gaming Reviews, is made easily accessible on all devices with help from the Materialize framework. Test through Google Developer Tools, on devices: 
@@ -114,3 +106,4 @@ Testing was done site-wide, all tests undertaken are shown below:
     - ASUS ZenScreen 
 
 ## Issues/ Bugs Found & Resolved
+
