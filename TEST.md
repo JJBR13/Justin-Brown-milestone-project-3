@@ -23,6 +23,12 @@ Testing was done site-wide, all tests undertaken are shown below:
 
 ## Wave
 
+[WAVE link](https://wave.webaim.org/)
+
+- This Chrome extension was used throughout the build of the site as well as final testing, this was to minimize bugs at the end of the project in final testing. 
+
+![Wave Screenshot](documents/test/wave.png)
+
 ## Validator Testing
 
 ### HTML
@@ -58,6 +64,7 @@ Testing was done site-wide, all tests undertaken are shown below:
 ## Lighthouse 
 
 ### Desktop Results
+
 ### Mobile Results
 
 ## Colour Contrast 
@@ -72,6 +79,28 @@ Testing was done site-wide, all tests undertaken are shown below:
 - The website was tested in Chrome on mobile and tablet. 
 
 - All tested devices were consistent across browsers.
+
+## Browser Compatibility 
+
+- This site was tested on Chrome, Microsoft Edge, and Firefox on desktop.
+
+- The website was tested in Chrome on mobile and tablet. 
+
+- All tested devices were consistent across browsers.
+
 ## Responsivity
+
+- Escape Gaming Reviews, is made easily accessible on all devices with help from the Materialize framework. Test through Google Developer Tools, on devices: 
+    - iPhone SE
+    - iPhone XR
+    - Pixel 5
+    - Samsung S8+
+    - iPad Mini
+    - iPad Air 
+
+- The site was also tested for full responsive functionality manually on the below devices: 
+    - Razor Blade 15 
+    - Galaxy Fold Z3
+    - ASUS ZenScreen 
 
 ## Issues/ Bugs Found & Resolved

@@ -15,7 +15,7 @@
   <!-- link to css -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon.webp') }}">
   {% block styles %}
   {% endblock %}
   <title>Escape Gaming Reviews</title>
@@ -24,7 +24,7 @@
 <body>
 
   <header>
-    <div class="hero-block">
+    <div id="hero-block">
     
     </div>
     
@@ -92,7 +92,7 @@
     <div>
       <div class="row center-align">
         <div class="col s12 l2">
-          <a href="{{ url_for('home') }}"><img id="footer-logo" class="p-t" src="{{ url_for('static', filename='images/logo.png') }}" alt="Site logo"></a>
+          <a href="{{ url_for('home') }}"><img id="footer-logo" class="p-t" src="{{ url_for('static', filename='images/logo.webp') }}" alt="Site logo"></a>
         </div>
 
         <div class="col s10 offset-s2 l10">

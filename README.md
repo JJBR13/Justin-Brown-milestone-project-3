@@ -318,7 +318,7 @@ Achieving user stories:
 1. Navigate to the [Github](https://github.com/JJBR13/Justin-Brown-milestone-project-two).
 2. Click the "Code" dropdown button. 
 3. Select "Download ZIP" or " Open with GitHub Desktop"
-4. Unpackage ZIP file locally with Integrated Development Environment (IDE).
+4. Unpackage the ZIP file locally with Integrated Development Environment (IDE).
 
 ## References, Credit, Frameworks & Programs
 
@@ -357,6 +357,9 @@ Achieving user stories:
 - [Emailjs](https://www.emailjs.com/): 
     - Used for a contact form on contact.html
 
+- [Converto](https://convertio.co/): 
+    - Used to convert banner from PNG to WEBP format.
+
 ### Credit 
 
 - [stack Overflow](https://stackoverflow.com/questions/50687845/jinja-how-to-force-truncate-when-value-exceeds-specified-field-width)
@@ -365,7 +368,7 @@ Achieving user stories:
 - [Steam & Steam users](https://store.steampowered.com/)
     - Pull review content from users about certain games.
 
-- [w3school](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp): 
+- [Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo): 
     - Back to top button js function code.
 
 [Code Institute](https://codeinstitute.net/): 
