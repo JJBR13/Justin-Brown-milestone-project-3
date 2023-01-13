@@ -65,9 +65,17 @@ Testing was done site-wide, all tests undertaken are shown below:
 
 [Lighthouse](https://developer.chrome.com/docs/lighthouse/)
 
+- Lighthouse gave a lot of insight into the functionality and interpretation of the site. This test highlighted the main issue was the image load. This was dues to image files being too big, which led to the compression of all .png files and changing the format to webp. This helped increase the scores tremendously. 
+
+- There was a considerable drop in performance on phone. This leads to a media query being generated for the banner. However, on inspections of prompts it gave, were dues to imported libraries from Materialize.
+
 ### Desktop Results
 
+![Desktop Lighthouse Results](documents/test/lighthouse_desktop.png)
+
 ### Mobile Results
+
+![Mobile Lighthouse Results](documents/test/lighthouse_mobile.png)
 
 ## Colour Contrast 
 
