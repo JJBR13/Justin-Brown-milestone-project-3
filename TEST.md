@@ -9,6 +9,8 @@ Testing was done site-wide, all tests undertaken are shown below:
 - [Validator Testing](#validator-testing)
   + [HTML](#html)
   + [CSS](#CSS)
+  + [JavaScript](#javascript)
+  + [PEP8](#pep8-online)
 - [Lighthouse](#lighthouse)
   + [Desktop Results](#desktop-results)
   + [Mobile Results](#mobile-results)
@@ -24,7 +26,34 @@ Testing was done site-wide, all tests undertaken are shown below:
 ## Validator Testing
 
 ### HTML
+
+[W3C HTML Validator link](https://validator.w3.org/)
+
+- All .html files were validated through this checker, highlighting issues such as: 
+  - Redundant tags 
+  - Missing tags 
+  - "POST" method in div tags, not for tags
+
+- This was brilliant, to find these issues, however, due to the use of Jinji templating and url_for for href links, these tests were never completely clear. 
+
 ### CSS
+
+[W3C CSS Validator link](https://jigsaw.w3.org/css-validator/#validate_by_input+with_options)
+![CSS Validator Results](documents/test/css.png)
+
+- This test returned no issues. 
+
+## JavaScript
+
+[JSHint](https://jshint.com/)
+
+- Both files were Tested, they highlighted minimal issues and pulled errors with the Materialize script.
+
+## PEP8 Online
+
+[PEP8](http://ww7.pep8online.com/)
+
+- This validation tested python code, in the app.py and... 
 
 ## Lighthouse 
 

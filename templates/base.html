@@ -71,7 +71,7 @@
   </header>
 
   <!-- Flash Messages -->
-  <section class="p-t p-b center-align">
+  <div class="p-t p-b center-align">
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
@@ -81,7 +81,7 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
-  </section>
+  </div>
 
   <main>
     {% block content %}
