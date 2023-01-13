@@ -21,11 +21,70 @@ Testing was done site-wide, all tests undertaken are shown below:
 
 ## Functional Testing 
 
+### 1. 
+
+Description: 
+
+Ensure the user can navigate header & footer NAV-BAR
+
+Steps: 
+
+I. Click Reviews<br>
+II. Redirect to Reviews.<br> 
+III. Repeat for Home, Sign up, Login, Contact, Account and Add Review pages<br> 
+IV. Repeat all steps on all pages
+
+Expected: 
+
+NAV-BAR heading link user to relevant pages.
+
+Outcome: 
+
+NAV-BAR heading link user to relevant pages. 
+
+<hr>
+
+## 2. 
+
+Description: Ensure footer logo links to home
+
+Steps: 
+
+I. Click logo in footer<br>
+II. Redirect to home page 
+
+Expected: 
+
+Logo Redirect to Home page. 
+
+Outcome : 
+
+Logo when clicked links user back to home page. 
+
+<hr>
+
+### 3. 
+
+Description: Copywrite text, links to GitHub repositories
+
+Steps: 
+
+I. Click Copywrite text<br>
+II. Redirect to GitHub repositories. 
+
+Expected: 
+
+Copywrite text links to repositories.
+
+Outcome : 
+
+When clicked links to Github repositories. 
+
 ## Wave
 
 [WAVE link](https://wave.webaim.org/)
 
-- This Chrome extension was used throughout the build of the site as well as final testing, this was to minimize bugs at the end of the project in final testing. 
+- This Chrome extension was used throughout the build of the site as well as final testing, this was to minimize bugs at the end of the project's final testing. 
 
 ![Wave Screenshot](documents/test/wave.png)
 
