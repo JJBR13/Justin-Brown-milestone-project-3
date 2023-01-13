@@ -1,9 +1,9 @@
 # Escape Gaming Reviews
-## Milestone Project 3:  *Deminstration of Backend Development understand, through a gaming review site.* 
+## Milestone Project 3:  *Demonstration of Backend Development understanding, through a gaming review site.* 
 
-DISCLAIMER: This is a project for Code Institute, to demonstrate understanding of Backend Development, and not for finacial gain. 
+DISCLAIMER: This is a project for Code Institute, to demonstrate an understanding of Backend Development and not financialise gain. 
 
-# SCRENSHOT HERE!
+![MockUps](documents/mockups.png)
 
 ## Live Project 
 
@@ -94,7 +94,7 @@ The idea behind this website demonstrates 'CRUD' functionality. This site allows
 
 ### Favicon 
 
-![ADD Favicon snip](#)
+![ADD Favicon snip](documents/favicon.png)
 
 -  A site-wide favicon of the site logo was created, this allows the user to easily identify the site when multiple are open. Helping to achieve user stories:
 
@@ -360,6 +360,9 @@ Achieving user stories:
 - [Converto](https://convertio.co/): 
     - Used to convert banner from PNG to WEBP format.
 
+- [Techsini](https://techsini.com/multi-mockup/index.php): 
+    - Created mockups from the live site.
+
 ### Credit 
 
 - [stack Overflow](https://stackoverflow.com/questions/50687845/jinja-how-to-force-truncate-when-value-exceeds-specified-field-width)
@@ -403,7 +406,7 @@ Achieving user stories:
 ### Programs 
 
 - [Balsamiq](https://balsamiq.com/)
-   - Allowed the creation of the wireframes.
+   - Allowed the creation of wireframes.
 
 - [Adobe Suite](https://www.adobe.com/uk/)
   - Used to crop, adjust and scale images. 
