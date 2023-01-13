@@ -2,7 +2,7 @@
 {% block content %}
 
 <div class="row">
-    <form id="contact_form" class="col s10 offset-s1 m8 offset-m2" onsubmit="return sendMail(this);">
+    <form id="contact_form" class="col s10 offset-s1 m8 offset-m2">
         <div class="row">
             <div>
                 <h1 class="center-align header-text">Contact Now</h1>
@@ -10,6 +10,7 @@
 
             <!-- Submission reponse -->
             <div id="response" class="center-align p-b">
+                <p></p>
             </div>
 
             <!-- Name -->
@@ -40,7 +41,7 @@
 
             <!-- Submit btn -->
             <div class="col s12 center-align">
-                <button id="send_btn" class="btn waves-effect waves-light sub-btn" type="submit">
+                <button id="send_btn" class="btn waves-effect waves-light sub-btn" onclick="sendMail()" value="Send" type="submit">
                     Send Message
                 </button>
             </div>
@@ -49,13 +50,13 @@
 </div>
 
 <!-- Jsdelivr script -->
-<script src="static/js/email.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-<script>
+<script type="text/javascript">
     (function() {
     emailjs.init("MH6RI5ZX8w-9dnuOs");
     })();
     </script>
+
+<script src="static/js/email.js"></script>
 
 {% endblock %}

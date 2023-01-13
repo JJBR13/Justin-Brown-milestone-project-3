@@ -371,6 +371,9 @@ Achieving user stories:
 - [Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo): 
     - Back to top button js function code.
 
+- [Jeffrey Martinez](https://martinezjf2.medium.com/how-to-setup-emailjs-33809350f0f8)
+    - Blog used to help initialize email.js
+
 [Code Institute](https://codeinstitute.net/): 
     - For all the lecture/ learning content provided. 
     
