@@ -70,7 +70,7 @@ The idea behind this website demonstrates 'CRUD' functionality. This site allows
 
 ### Wireframes
 
-[Click here for Wireframe PDF](#!)
+[Click here for Wireframe PDF](documents/wireframes.pdf)
 
 ### Colour Pallete
 
