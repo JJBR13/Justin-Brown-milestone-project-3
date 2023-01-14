@@ -105,11 +105,11 @@ def login():
             # match hash pasword to input password
             if check_password_hash(
                existing_gamer["password"], request.form.get("password")):
-                    session["gamer"] = request.form.get("gamer_id").lower()
-                    flash("WELCOME BACK, {}".format(
+                session["gamer"] = request.form.get("gamer_id").lower()
+                flash("WELCOME BACK, {}".format(
                         request.form.get("gamer_id")))
-                    return redirect(url_for(
-                        "account", gamer_id=session["gamer"]))
+                return redirect(url_for(
+                    "account", gamer_id=session["gamer"]))
             else:
                 # incorrect password
                 flash("Incorrect Gamer Id and/or Password")
