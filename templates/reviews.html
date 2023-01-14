@@ -6,7 +6,7 @@
 </div>
 
 <!-- Search bar -->
-<section class="row search">
+<div class="row search">
     <form action="{{ url_for('search') }}" method="POST" class="col s12">
         <div class="row center-align">
             <div class="row">
@@ -30,7 +30,7 @@
             </div>
         </div>
     </form>
-</section>
+</div>
 
 {% for r in reviews %}
 <!-- Review Card -->

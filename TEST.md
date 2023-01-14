@@ -321,7 +321,7 @@ Logs out user, redirecting them to the home page, where the "see you soon" messa
 
 Outcome: 
 
-User gets redirected to home page with a relevant flash message displayed.
+The user gets redirected to the home page with a relevant flash message displayed.
 
 <hr>
 
@@ -329,7 +329,7 @@ User gets redirected to home page with a relevant flash message displayed.
 
 Description: 
 
-Need to sing up? The button takes the user to the sign up page.
+Need to sign up? The button takes the user to the sign up page.
 
 Steps: 
 
@@ -363,7 +363,7 @@ Takes the user to view their review.
 
 Outcome: 
 
-The user is taken to edit review page, to edit their desired review. 
+The user is taken to the edit review page, to edit their desired review. 
 
 <hr>
 
@@ -371,13 +371,13 @@ The user is taken to edit review page, to edit their desired review.
 
 Description: 
 
-Edit save button, updates review and redirects user back to account page.
+Edit save button, updates review, and redirects the user back to the account page.
 
 Steps: 
 
 I. Click the button.<br>
-II. Save changed review to database.<br>
-III. Redirects the user back to account page. 
+II. Save the changed review to the database.<br>
+III. Redirects the user back to the account page. 
 
 Expected: 
 
@@ -512,7 +512,7 @@ The button removes the modal and redirects the user to their account page.
 
 [PEP8](http://ww7.pep8online.com/)
 
-- This validation tested python code, in the app.py and... 
+- This validation tested python code, in the app.py and was used throughout the development giving key indications of what was not compliant and the reason for this. This helped keep the code clean and readable throughout the development.
 
 ## Lighthouse 
 
