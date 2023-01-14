@@ -39,7 +39,9 @@ def home():
 def search():
     query = request.form.get("query")
 
-    reviews = mongo.db.reviews.find({"$text": {"$search": query}})
+    reviews = list()
+    reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
+    print(reviews)
     return render_template("reviews.html", reviews=reviews)
 
 

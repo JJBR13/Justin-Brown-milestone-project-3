@@ -32,7 +32,7 @@
     </form>
 </div>
 
-{% for r in reviews %}
+{% if reviews %}
 <!-- Review Card -->
 <div class="row center-align card-margin">
     {% for review in reviews %}
@@ -68,5 +68,5 @@
 <div class="p-t p-b">
     <p class="red-text text-darken-4 center-align"><strong>No Results Found</strong></p>
 </div>
-{% endfor %}
+{% endif %}
 {% endblock %}
