@@ -25,22 +25,22 @@ Testing was done site-wide, all tests undertaken are shown below:
 
 Description: 
 
-Ensure the user can navigate header & footer NAV-BAR
+Ensure the user can navigate the header & footer NAV-BAR
 
 Steps: 
 
 I. Click Reviews<br>
 II. Redirect to Reviews.<br> 
-III. Repeat for Home, Sign up, Login, Contact, Account and Add Review pages<br> 
+III. Repeat for Home, Sign up, Login, Contact, Account, and Add Review pages<br> 
 IV. Repeat all steps on all pages
 
 Expected: 
 
-NAV-BAR heading link user to relevant pages.
+NAV-BAR heading links the user to relevant pages.
 
 Outcome: 
 
-NAV-BAR heading link user to relevant pages. 
+NAV-BAR heading link the user to relevant pages. 
 
 <hr>
 
@@ -52,7 +52,7 @@ Ensure the footer logo links to home
 
 Steps: 
 
-I. Click the logo in footer<br>
+I. Click the logo in the footer<br>
 II. Redirect to the home page 
 
 Expected: 
@@ -61,7 +61,7 @@ Logo Redirect to Home page.
 
 Outcome: 
 
-Logo when clicked links user back to home page. 
+Logo when clicked links the user back to the home page. 
 
 <hr>
 
@@ -90,13 +90,13 @@ When clicking links to Github repositories.
 
 Description: 
 
-Search bar funtion
+Search bar function
 
 Steps: 
 
 I. Enter desired search input <br>
-II. Filter reviews for key words within review content & title <br>
-III. Display reviews with a search results. 
+II. Filter reviews for keywords within review content & title <br>
+III. Display reviews with search results. 
 
 Expected: 
 
@@ -179,7 +179,7 @@ Back to top button, scroll to top of review.
 
 Steps: 
 
-I. Scroll through review to the bottom.<br>
+I. Scroll through the review to the bottom.<br>
 II. Click the back to the top, button.<br>
 III. Takes you back to the top of the review.
 
@@ -206,7 +206,7 @@ II. Press the back button to return to view all reviews.
 
 Expected: 
 
-To return user to All reviews. 
+To return the user to All reviews. 
 
 Outcome: 
 
@@ -245,7 +245,7 @@ Sign up submit button registers a new user to the database.
 
 Steps: 
 
-I. Fill out sign up form.<br>
+I. Fill out the sign up form.<br>
 II. Press submit button.<br>
 III. Redirects user to account page.<br>
 IV. Flash message displays.
@@ -317,7 +317,7 @@ IV. Flash message displays.
 
 Expected: 
 
-Logs out user, redirecting them to the home page, where see you soon message is displayed.
+Logs out user, redirecting them to the home page, where the "see you soon" message is displayed.
 
 Outcome: 
 
@@ -346,9 +346,133 @@ The user gets redirected to the sign up page.
 
 <hr>
 
+### 16. 
 
+Description: 
 
+The edit button takes the user to edit the review. 
 
+Steps: 
+
+I. Click the button<br>
+II. Redirects user to edit page<br>
+
+Expected: 
+
+Takes the user to view their review.
+
+Outcome: 
+
+The user is taken to edit review page, to edit their desired review. 
+
+<hr>
+
+### 17.
+
+Description: 
+
+Edit save button, updates review and redirects user back to account page.
+
+Steps: 
+
+I. Click the button.<br>
+II. Save changed review to database.<br>
+III. Redirects the user back to account page. 
+
+Expected: 
+
+Updates users desired reviews and save them to the database.
+
+Outcome: 
+
+Updates the user reviews and redirects the user back to their account.
+
+<hr>
+
+### 18. (NEED TO MAKE WORK!!!)
+
+Description: 
+
+The cancel button allows the user to return to the account page without editing their review.
+
+Steps: 
+
+I. Click the button.<br>
+II. Redirects user to the account page.<br>
+
+Expected: 
+
+Redirects user to account page without making any changes to the review.
+
+Outcome: 
+
+The user does not have to change the review and redirect the user back to their account. 
+
+<hr>
+
+### 19. 
+
+Description: 
+
+The delete button activates the delete modal.
+
+Steps: 
+
+I. Click the button.<br>
+II. Brings up modal.<br>
+
+Expected: 
+
+The button brings up a modal, making sure the user wants to delete the review. 
+
+Outcome: 
+
+The delete button brings up a modal, making sure the user is sure they want to delete the review. 
+
+<hr>
+
+### 20. 
+
+Description: 
+
+The modal delete button confirms deletion and removes the review from the database.
+
+Steps: 
+
+I. Click the button.<br>
+II. Deletes review from the database.<br>
+III. Redirects to the account page, with relevant a flash message.
+
+Expected: 
+
+The delete button removes the review from the database and takes the user back to their account page.
+
+Outcome: 
+
+The button deletes the review, and it the takes user back to the account page with a flash message. 
+
+<hr>
+
+### 21. 
+
+Description: 
+
+The modal cancel button stops the user from having to delete the review. 
+
+Steps: 
+
+I. Click the button.<br>
+II. Bring the user back to their account page.<br>
+
+Expected: 
+
+Remove the modal and redirect the user back to their account page.
+
+Outcome: 
+
+The button removes the modal and redirects the user to their account page.
+
+<hr>
 
 ## Wave
 
