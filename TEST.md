@@ -5,7 +5,7 @@ Testing was done site-wide, all tests undertaken are shown below:
 ## Contents 
 
 - [Functional Testing](#functional-testing)
-- [Wave](#wave)
+- [WAVE](#wave)
 - [Validator Testing](#validator-testing)
   + [HTML](#html)
   + [CSS](#CSS)
@@ -474,7 +474,7 @@ The button removes the modal and redirects the user to their account page.
 
 <hr>
 
-## Wave
+## WAVE
 
 [WAVE link](https://wave.webaim.org/)
 
@@ -560,3 +560,34 @@ The button removes the modal and redirects the user to their account page.
 
 ## Issues/ Bugs Found & Resolved
 
+### a)
+
+- The first bug encountered was with the app route /sign_up, the function worked until after pressing the submit button. The new user was being uploaded to the database but not redirected to the correct place. 
+
+    - This was fixed after a typo was corrected to the collection name: gamerId should have been gamer_id.
+
+### b)
+
+- This was due to not having labels on my form element inputs, which caused WAVE to highlight an error. 
+    
+    - It was resolved by simply putting label attributes form input fields.
+
+### c) 
+
+- When viewing the site on mobile devices it was clear that all pages were visible to the user. 
+
+    - This was fixed by adding the same Jinja templating from the main navbar to the mobile navbar.
+
+### d)
+
+- App.route edit_reviews, was not POST-ing the changes to the database. 
+
+  - This was fixed by using the [$set](https://www.mongodb.com/docs/manual/reference/operator/update/set/) operator. 
+
+### e) 
+
+- Connect Emailjs to contact form, was throwing a POST 404 error. 
+
+    - This was fixed by using vanilla JavaScript and getting the correct order for importing the API.
+
+Back to [README.md](/README.md)
