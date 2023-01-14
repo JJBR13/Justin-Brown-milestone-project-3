@@ -46,18 +46,20 @@ NAV-BAR heading link user to relevant pages.
 
 ## 2. 
 
-Description: Ensure footer logo links to home
+Description: 
+
+Ensure the footer logo links to home
 
 Steps: 
 
-I. Click logo in footer<br>
-II. Redirect to home page 
+I. Click the logo in footer<br>
+II. Redirect to the home page 
 
 Expected: 
 
 Logo Redirect to Home page. 
 
-Outcome : 
+Outcome: 
 
 Logo when clicked links user back to home page. 
 
@@ -65,7 +67,9 @@ Logo when clicked links user back to home page.
 
 ### 3. 
 
-Description: Copywrite text, links to GitHub repositories
+Description: 
+
+Copywrite text, links to GitHub repositories
 
 Steps: 
 
@@ -76,9 +80,275 @@ Expected:
 
 Copywrite text links to repositories.
 
-Outcome : 
+Outcome: 
 
-When clicked links to Github repositories. 
+When clicking links to Github repositories. 
+
+<hr>
+
+### 4.
+
+Description: 
+
+Search bar funtion
+
+Steps: 
+
+I. Enter desired search input <br>
+II. Filter reviews for key words within review content & title <br>
+III. Display reviews with a search results. 
+
+Expected: 
+
+Display all reviews with search input.
+
+Outcome: 
+
+Shows all reviews with users desired input. 
+
+<hr>
+
+### 5.
+
+Description: 
+
+Search button, activate a search.
+
+Steps: 
+
+I. Click the search button after input is entered<br>
+II. Activates search on the database. 
+
+Expected: 
+
+The button activates the search.
+
+Outcome: 
+
+When clicked button generates a search of the database. 
+
+<hr>
+
+### 6. 
+
+Description: 
+
+The reset button resets the search.
+
+Steps: 
+
+I. Click reset button<br>
+II. Clears search & returns all reviews. 
+
+Expected: 
+
+Clear prior search results and display all reviews.
+
+Outcome: 
+
+When clicked reset the search shows all reviews in the database. 
+
+<hr>
+
+### 7.
+
+Description: 
+
+Press the read more link on review content.
+
+Steps: 
+
+I. Click read more link<br>
+II. Displays the whole review and all content. 
+
+Expected: 
+
+To redirect the user to read the review entirely.
+
+Outcome: 
+
+Shows user all review content.
+
+<hr>
+
+### 8.
+
+Description: 
+
+Back to top button, scroll to top of review.
+
+Steps: 
+
+I. Scroll through review to the bottom.<br>
+II. Click the back to the top, button.<br>
+III. Takes you back to the top of the review.
+
+Expected: 
+
+Smoothly auto-scroll the user to the top of the review.
+
+Outcome: 
+
+Auto-scroll the user seamlessly to the top of the review.
+
+<hr>
+
+### 9.
+
+Description: 
+
+Press the back button, to return the user to the review page. 
+
+Steps: 
+
+I. User scrolls to the bottom of the review after reading the content.<br>
+II. Press the back button to return to view all reviews.
+
+Expected: 
+
+To return user to All reviews. 
+
+Outcome: 
+
+Returns the user to the reviews page, able to view all reviews. 
+
+<hr>
+
+### 10.
+
+Description: 
+
+Send button on the contact form, sends the form to admin. 
+
+Steps: 
+
+I. Fill out required form input fields<br>
+II. Click send message button.<br>
+III. Sends for & displays thank you a message to the user.<br>
+IV. Page auto reloads after 3 seconds.
+
+Expected: 
+
+Form sent, and displays thank you a message, reloading the page after three seconds. 
+
+Outcome: 
+
+Sends form, displays relevant, message, and reloads the page after three seconds. 
+
+<hr>
+
+### 11.
+
+Description: 
+
+Sign up submit button registers a new user to the database. 
+
+Steps: 
+
+I. Fill out sign up form.<br>
+II. Press submit button.<br>
+III. Redirects user to account page.<br>
+IV. Flash message displays.
+
+Expected: 
+
+Inputs new user details into the database. Redirecting them to the new account page, with a relevant success message. 
+
+Outcome: 
+
+Creates a new user on the database, redirects the user to the account page, and displays relevant flash message. 
+
+<hr>
+
+### 12.
+
+Description: 
+
+Have an account? The button takes the user to the login page.
+
+Steps: 
+
+I. Click the button link.<br>
+II. Redirects user to login page<br>
+
+Expected: 
+
+Take the user to the login page. 
+
+Outcome: 
+
+The user gets redirected to the login page. 
+
+<hr>
+
+### 13. 
+
+Description: 
+
+Review now button, allows user to create thier first review.
+
+Steps: 
+
+I. Click review now.<br>
+II. Redirects user to add a review.<br>
+
+Expected: 
+
+Takes the user to be able to add a review.
+
+Outcome: 
+
+Takes user to add review page. 
+
+<hr>
+
+### 14. 
+
+Description: 
+
+Logout button logs user out of account.
+
+Steps: 
+
+I. Click the Logout link.<br>
+II. Logs user out of account.<br>
+III. Redirects user home page.<br>
+IV. Flash message displays.
+
+Expected: 
+
+Logs out user, redirecting them to the home page, where see you soon message is displayed.
+
+Outcome: 
+
+User gets redirected to home page with a relevant flash message displayed.
+
+<hr>
+
+### 15.
+
+Description: 
+
+Need to sing up? The button takes the user to the sign up page.
+
+Steps: 
+
+I. Click the button link.<br>
+II. Redirects user to sign up page<br>
+
+Expected: 
+
+Take the user to the sign up page. 
+
+Outcome: 
+
+The user gets redirected to the sign up page. 
+
+<hr>
+
+
+
+
 
 ## Wave
 
