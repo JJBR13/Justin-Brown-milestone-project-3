@@ -9,7 +9,7 @@
     </h1>
 </form>
 
-{% for r in reviews %}
+{% if reviews %}
     <!-- Shows when user HAS reviews -->
 
     <!-- My Reviews -->
@@ -71,7 +71,7 @@
                     <div class="col s12 l2">
                     </div>
                 </div>
-            {% endfor %}
+        {% endfor %}
             </div>
 
 {% else %}
@@ -85,6 +85,6 @@
             </div>
         </div>
 
-{% endfor %}
+{% endif %}
 
 {% endblock %}
