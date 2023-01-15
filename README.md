@@ -319,6 +319,13 @@ Achieving user stories:
 2. Click the "Code" dropdown button. 
 3. Select "Download ZIP" or " Open with GitHub Desktop"
 4. Unpackage the ZIP file locally with Integrated Development Environment (IDE).
+5. Get env.py variables: 
+    - key: IP, value: 0.0.0.0
+    - key: PORT, value: 5000
+    - key: MONGO_DBNAME, value: (database name)
+    - key: MONGO_URI, value: (located in MongoDb  by going to cluster --> connect --> connect to application, and copying the  
+      link adding in your database name and password)
+    - key: SECRET_KEY, value: (this is a custom secrete key set up for configuration to keep user sessions secure)
 
 ## References, Credit, Frameworks & Programs
 
