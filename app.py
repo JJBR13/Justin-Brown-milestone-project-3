@@ -188,7 +188,7 @@ def edit_review(reviews_id):
     Allows gamer to edit review, displays flash message if sucessfull.
     Redirects gamer to account page.
     """
-    user = mongo.db.reviews.find({"uploaded_by"})
+    user = mongo.db.reviews.find({"uploaded_by": session["gamer"]})
 
     if user == session["gamer"]:
         if request.method == "POST":
