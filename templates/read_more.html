@@ -15,8 +15,19 @@
                 <div class="center-align">
                     <h3 id="gamer-head">{{ review.uploaded_by }}</h3>
                 </div>
+
+                <!-- Category -->
+                <div class="col s12 center-align">
+                    <p class="cat-margin">{{ review.category_type }}</p>
+                </div>
+
+                <!-- Console -->
+                <div class="col s12 p-b">
+                    <p class="cat-margin center-align">{{ review.console_type }}</p>
+                </div>
+
                 <!-- Review content -->
-                <div>
+                <div class="center-align">
                     {{ review.review_content }}
                 </div>
             </div>
@@ -28,7 +39,8 @@
         <div class="col s12">
             <div class="row">
                 <div col class="col s6">
-                    <a id="back-btn" href="{{ url_for('import_reviews') }}" class="btn blue-shadow right"><i class="fa-solid fa-caret-left"></i>  Back</a>
+                    <a id="back-btn" href="{{ url_for('import_reviews') }}" class="btn blue-shadow right"><i
+                            class="fa-solid fa-caret-left"></i> Back</a>
                 </div>
                 <div class="row">
                     <div col class="col s6">
