@@ -45,26 +45,26 @@
 
             <!-- Review by -->
             <div class="center-align">
-                <h3 id="gamer-head">{{ review.uploaded_by }}</h3>
+                <h3 id="gamer-head"> Reviewed by: {{ review.uploaded_by }}</h3>
             </div>
 
             <!-- Category -->
-            <div class="col s12">
-                <p class="cat-margin">{{ review.category_type }}</p>
+            <div class="col s12 center-align">
+                <p class="cat-margin review-sub">{{ review.category_type }}</p>
             </div>
 
             <!-- Console -->
-            <div class="col s12 p-b">
-                <p class="cat-margin">{{ review.console_type }}</p>
+            <div class="col s12 center-align ">
+                <p class="review-sub no-margin p-b ">{{ review.console_type }}</p>
             </div>
 
-            <div class="row">
+            
                 <!-- Review content -->
                 <div class="col s12">
                     {{ review.review_content|truncate(120, true, '') }}
                     <a id="read_more" href="{{ url_for('read_more', reviews_id=review._id) }}">read more</a>
                 </div>
-            </div>
+           
         </div>
     </div>
     {% endfor %}

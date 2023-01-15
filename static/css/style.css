@@ -230,6 +230,14 @@ nav {
     margin: 15px;
 }
 
+.review-sub {
+    text-shadow: 2px 2px 5px rgb(31, 56, 198);
+}
+
+.no-margin {
+    margin: 0;
+}
+
 #read_more {
     font-family: 'Gruppo', cursive;
     font-size: 20px;

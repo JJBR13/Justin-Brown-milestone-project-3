@@ -13,17 +13,17 @@
 
                 <!-- Review by -->
                 <div class="center-align">
-                    <h3 id="gamer-head">{{ review.uploaded_by }}</h3>
+                    <h3 id="gamer-head"> Reviewed by: {{ review.uploaded_by }}</h3>
                 </div>
 
                 <!-- Category -->
                 <div class="col s12 center-align">
-                    <p class="cat-margin">{{ review.category_type }}</p>
+                    <p class="cat-margin review-sub">{{ review.category_type }}</p>
                 </div>
 
                 <!-- Console -->
-                <div class="col s12 p-b">
-                    <p class="cat-margin center-align">{{ review.console_type }}</p>
+                <div class="col s12 center-align ">
+                    <p class="review-sub no-margin p-b ">{{ review.console_type }}</p>
                 </div>
 
                 <!-- Review content -->
