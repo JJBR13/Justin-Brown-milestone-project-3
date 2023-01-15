@@ -8,20 +8,19 @@
         {{ gamer_id }}
     </h1>
 </form>
+ <!-- Shows when user HAS reviews -->
+    {% if reviews %}
+        <!-- My Reviews -->
+        <form class="col s12 m8 offset-m2 p-b" method="POST" action="{{ url_for('login') }}">
+            <h3 class="header-text-blue my-review">My Reviews</h3>
+        </form>
 
-<!-- Loop displays review now (bottom content)-->
-{% for r in reviews %}
-    <!-- Shows when user HAS reviews -->
 
-    <!-- My Reviews -->
-    <form class="col s12 m8 offset-m2 p-b" method="POST" action="{{ url_for('login') }}">
-        <h3 class="header-text-blue my-review">My Reviews</h3>
-    </form>
-
-    <!-- Display Review Template -->
-    <div class="row center-align card-margin">
+        <!-- Display Review Template -->
+        <div class="row center-align card-margin">
+    
+    
         {% for review in reviews %}
-
             <div class="col s12">
                 <div class="card-panel shadow">
                     <!-- Game Name-->
@@ -77,21 +76,24 @@
                     <div class="col s12 l2">
                     </div>
                 </div>
+            </div>        
         {% endfor %}
-            </div>
+       
+    {% endif %}
 
-{% else %}
-        <!-- Shows if user has NO reviews -->
-        <div class="row p-b">
-            <div class="col s12 m10 offset-m1 l8 offset-l2 xl4 offset-xl2">
-                <h3 id="no-reviews">
-                    You have yet to write a review
-                </h3>
-                <a href="{{ url_for('add_review') }}" id="review-now" class="btn-small">Review Now</a>
+    {% if reviews|length == 0 %}
+            <!-- Shows if user has NO reviews -->
+            <div class="row p-b">
+                <div class="col s12 m10 offset-m1 l8 offset-l2 xl4 offset-xl2">
+                    <h3 id="no-reviews">
+                        You have yet to write a review
+                    </h3>
+                    <a href="{{ url_for('add_review') }}" id="review-now" class="btn-small">Review Now</a>
+                </div>
             </div>
         </div>
-    </div>
+    {% endif %}
 
-{% endfor %}
+
 
 {% endblock %}
