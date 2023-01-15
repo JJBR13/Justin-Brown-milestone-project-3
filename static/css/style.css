@@ -254,6 +254,10 @@ nav {
     box-shadow: 0 4px 8px 0 rgb(31, 56, 198,1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.cat-margin {
+    margin: 5px;
+}
+
 /* ----------------------------------------- Add_review.html */
 
 #gamer-head {
