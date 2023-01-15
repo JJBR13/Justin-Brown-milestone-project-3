@@ -33,45 +33,45 @@
 </div>
 
 {% if reviews %}
-<!-- Review Card -->
-<div class="row center-align card-margin">
-    {% for review in reviews %}
-    <div class="col s12 m6 l6">
-        <div class="card-panel shadow">
-            <!-- Game Name-->
-            <div class="center-align">
-                <h2 id="r-heading">{{ review.game_name }}</h2>
-            </div>
+    <!-- Review Card -->
+    <div class="row center-align card-margin">
+        {% for review in reviews %}
+            <div class="col s12 m6 l6">
+                <div class="card-panel shadow">
+                    <!-- Game Name-->
+                    <div class="center-align">
+                        <h2 id="r-heading">{{ review.game_name }}</h2>
+                    </div>
 
-            <!-- Review by -->
-            <div class="center-align">
-                <h3 id="gamer-head"> Reviewed by: {{ review.uploaded_by }}</h3>
-            </div>
+                    <!-- Review by -->
+                    <div class="center-align">
+                        <h3 id="gamer-head"> Reviewed by: {{ review.uploaded_by }}</h3>
+                    </div>
 
-            <!-- Category -->
-            <div class="col s12 center-align">
-                <p class="cat-margin review-sub">{{ review.category_type }}</p>
-            </div>
+                    <!-- Category -->
+                    <div class="col s12 center-align">
+                        <p class="cat-margin review-sub">{{ review.category_type }}</p>
+                    </div>
 
-            <!-- Console -->
-            <div class="col s12 center-align ">
-                <p class="review-sub no-margin p-b ">{{ review.console_type }}</p>
-            </div>
+                    <!-- Console -->
+                    <div class="col s12 center-align ">
+                        <p class="review-sub no-margin p-b ">{{ review.console_type }}</p>
+                    </div>
 
-            <div class="row">
-                <!-- Review content -->
-                <div class="col s12">
-                    {{ review.review_content|truncate(120, true, '') }}
-                    <a id="read_more" href="{{ url_for('read_more', reviews_id=review._id) }}">read more</a>
+                    <div class="row">
+                        <!-- Review content -->
+                        <div class="col s12">
+                            {{ review.review_content|truncate(120, true, '') }}
+                            <a id="read_more" href="{{ url_for('read_more', reviews_id=review._id) }}">read more</a>
+                        </div>
+                    </div>     
                 </div>
-            </div>     
-        </div>
+            </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
-{% else %}
-<div class="p-t p-b">
-    <p class="red-text text-darken-4 center-align"><strong>No Results Found</strong></p>
-</div>
+    {% else %}
+    <div class="p-t p-b">
+        <p class="red-text text-darken-4 center-align"><strong>No Results Found</strong></p>
+    </div>
 {% endif %}
 {% endblock %}
