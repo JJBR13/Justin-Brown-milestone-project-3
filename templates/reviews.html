@@ -58,13 +58,13 @@
                 <p class="review-sub no-margin p-b ">{{ review.console_type }}</p>
             </div>
 
-            
+            <div class="row">
                 <!-- Review content -->
                 <div class="col s12">
                     {{ review.review_content|truncate(120, true, '') }}
                     <a id="read_more" href="{{ url_for('read_more', reviews_id=review._id) }}">read more</a>
                 </div>
-           
+            </div>     
         </div>
     </div>
     {% endfor %}
