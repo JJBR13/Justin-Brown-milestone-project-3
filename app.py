@@ -41,7 +41,7 @@ def search():
 
     reviews = list()
     reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
-    print(reviews)
+
     return render_template("reviews.html", reviews=reviews)
 
 
@@ -206,7 +206,8 @@ def edit_review(reviews_id):
     console = mongo.db.console.find().sort("console_type", 1)
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
-        "edit_review.html", reviews=reviews, console=console, categories=categories)
+        "edit_review.html",
+        reviews=reviews, console=console, categories=categories)
 
 
 @app.route("/delete_review/<reviews_id>")

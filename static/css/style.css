@@ -313,6 +313,7 @@ nav {
 
 textarea.materialize-textarea {
     padding: 1rem;
+    height: 150px;
 }
 
 /* ------------------------------------------ contact.html */
