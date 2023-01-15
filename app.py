@@ -192,7 +192,7 @@ def edit_review(reviews_id):
         save = {
             "console_type": request.form.get("console_type"),
             "game_name": request.form.get("game_name"),
-            "category_type": request.form.get("category_type"),
+            "category_type": request.form.get("category_name"),
             "review_content": request.form.get("review_content"),
             "uploaded_by": session["gamer"]
         }

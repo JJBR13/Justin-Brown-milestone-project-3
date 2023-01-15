@@ -23,19 +23,16 @@
                         <select id="console_type" name="console_type" class="icons validate" aria-label="select console" required>
                             <label for="console_type" class="hide">Console Type</label>
                             <option value="" class="left" disabled>Select Console</option>
-                            {% for review in reviews %}
+                            <option value="{{ reviews.console_type }}">
+                                {{- reviews.console_type -}}
+                            </option>
                                 {% for con in console %}
-                                    {% if con.console_name == reviews.console_type %}
+                                    {% if con.console_type != reviews.console_type %}
                                         <option value="{{ con.console_type }}">
                                             {{- con.console_type -}}
                                         </option>
-                                    <!-- {% else %}
-                                        <option value="{{ con.console_type }}">
-                                            {{- con.console_type -}}
-                                        </option> -->
-                                    <!-- {% endif %} -->
+                                    {% endif %}
                                 {% endfor %} 
-                            {% endfor %}
                         </select>
                     </div>
                 </div>
@@ -45,14 +42,13 @@
                     <div class="input-field col s12">
                         <select id="category_name" name="category_name" class="icons validate" aria-label="select category" required>
                             <label for="review_content" class="hide">Review Content</label>
-                            <option value="" class="left" disabled>Select Console</option>
+                            <option value="{{ reviews.category_type }}" class="left" disabled>Select Console</option>
+                            <option value="{{ reviews.category_type }}">
+                                {{- reviews.category_type -}}
+                            </option>
                             {% for category in categories %}
-                                {% if category.category_name == reviews.category_type %}
-                                    <option value="{{ category.category_name }}">
-                                        {{- category.category_name -}}
-                                    </option>
-                                {% else %}
-                                    <option value="{{ category.category_name }}">
+                                {% if category.category_name != reviews.category_type %}
+                                    <option value="{{ category.category_name}}">
                                         {{- category.category_name -}}
                                     </option>
                                 {% endif %}
