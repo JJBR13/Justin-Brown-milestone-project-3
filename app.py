@@ -188,9 +188,9 @@ def edit_review(reviews_id):
     Allows gamer to edit review, displays flash message if sucessfull.
     Redirects gamer to account page.
     """
-    user = mongo.db.reviews.find({"uploaded_by": session["gamer"]})
+    review = mongo.db.reviews.find_one({"uploaded_by": session["gamer"]})
 
-    if user == session["gamer"]:
+    if review["uploaded_by"] == session["gamer"]:
         if request.method == "POST":
             save = {
                 "console_type": request.form.get("console_type"),
@@ -229,17 +229,21 @@ def delete_review(reviews_id):
     # get the user, we need to get the id for a redirect
     user = mongo.db.gamer_id.find_one({"gamer_id": session["gamer"]})
 
-    if review:
-        # try to delete review here
-        mongo.db.reviews.delete_one({"_id": ObjectId(reviews_id)})
-        # success message
-        flash("Review Sucessfully Deleted")
-        # redirect
-        return redirect(url_for("account", gamer_id=user['_id']))
+    if review["uploaded_by"] == session["gamer"]:
+        if review:
+            # try to delete review here
+            mongo.db.reviews.delete_one({"_id": ObjectId(reviews_id)})
+            # success message
+            flash("Review Sucessfully Deleted")
+            # redirect
+            return redirect(url_for("account", gamer_id=user['_id']))
+        else:
+            # review does not exist, redirect to home
+            flash("This review does not exist")
+            return redirect(url_for("account", gamer_id=user['_id']))
     else:
-        # review does not exist, redirect to home
-        flash("This review does not exist")
-        return redirect(url_for("account", gamer_id=user['_id']))
+        flash("Your not authorise to DELETE this review")
+        return redirect(url_for("home"))
 
 
 @app.route("/contact")
