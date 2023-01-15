@@ -389,7 +389,7 @@ Updates the user reviews and redirects the user back to their account.
 
 <hr>
 
-### 18. (NEED TO MAKE WORK!!!)
+### 18.
 
 Description: 
 
@@ -493,7 +493,7 @@ The button removes the modal and redirects the user to their account page.
   - Missing tags 
   - "POST" method in div tags, not for tags
 
-- This was brilliant, to find these issues, however, due to the use of Jinji templating and url_for for href links, these tests were never completely clear. 
+- This was brilliant, to find these issues, however, due to the use of Jinji templating and url_for for href links, duplicate id tage due to looping over data these tests were never completely clear. 
 
 ### CSS
 
@@ -589,5 +589,23 @@ The button removes the modal and redirects the user to their account page.
 - Connect Emailjs to contact form, was throwing a POST 404 error. 
 
     - This was fixed by using vanilla JavaScript and getting the correct order for importing the API.
+
+### f) 
+
+- Search bar, was searching through results but not displaying all results from game name, category_type, or both.
+
+  - This was fixed by wrapping the variable value in a list and creating an empty list variable to store the search reviews into.
+
+### g) 
+
+  - The edit file was not displaying correct categories and the console was in the dropdown menu, not prefiling this data when pressing the edit button. 
+
+    - This was fixed by moving the option value out of them for a loop. the drop-down feature then cycled through categories or consoles correctly and displayed the correct options.
+
+### h) 
+
+- Displaying reviews if the user had reviews, if not display the review now button and text. The reviews were displayed for users with reviews but the button did not appear for users without reviews. 
+
+  - This was fixed by wrapping the variable value in a list, targeting the review in on jinja if statement and the button in another if statement using the length function. 
 
 Back to [README.md](/README.md)
