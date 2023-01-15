@@ -23,16 +23,18 @@
                         <select id="console_type" name="console_type" class="icons validate" aria-label="select console" required>
                             <label for="console_type" class="hide">Console Type</label>
                             <option value="" class="left" disabled>Select Console</option>
-                            {% for con in console %}
-                                {% if con.console_type == reviews.console_type %}
-                                    <option value="{{ con.console_type }}">
-                                        {{- con.console_type -}}
-                                    </option>
-                                {% else %}
-                                    <option value="{{ con.console_type }}">
-                                        {{- con.console_type -}}
-                                    </option>
-                                {% endif %}
+                            {% for review in reviews %}
+                                {% for con in console %}
+                                    {% if con.console_name == reviews.console_type %}
+                                        <option value="{{ con.console_type }}">
+                                            {{- con.console_type -}}
+                                        </option>
+                                    <!-- {% else %}
+                                        <option value="{{ con.console_type }}">
+                                            {{- con.console_type -}}
+                                        </option> -->
+                                    <!-- {% endif %} -->
+                                {% endfor %} 
                             {% endfor %}
                         </select>
                     </div>

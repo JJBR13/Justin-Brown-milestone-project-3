@@ -28,10 +28,16 @@
                         <h3 id="r-heading">{{ review.game_name }}</h3>
                     </div>
 
-                    <!-- Category-->
+                    <!-- Console-->
                     <div class="col s12 p-b">
-                        <p><strong>{{ review.console_type }}</strong></p>
+                        <p class="cat-margin">{{ review.console_type }}</p>
                     </div>
+
+                    <!-- Category -->
+                    <div class="col s12 center-align">
+                        <p class="cat-margin">{{ review.category_type }}</p>
+                    </div>
+
 
                     <div class="row">
                         <!-- Review content -->
