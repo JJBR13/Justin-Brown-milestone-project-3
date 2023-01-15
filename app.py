@@ -188,28 +188,34 @@ def edit_review(reviews_id):
     Allows gamer to edit review, displays flash message if sucessfull.
     Redirects gamer to account page.
     """
-    if request.method == "POST":
-        save = {
-            "console_type": request.form.get("console_type"),
-            "game_name": request.form.get("game_name"),
-            "category_type": request.form.get("category_name"),
-            "review_content": request.form.get("review_content"),
-            "uploaded_by": session["gamer"]
-        }
-        # Update saved to mongoDB
-        mongo.db.reviews.update_one(
-            {"_id": ObjectId(reviews_id)}, {"$set": save})
-        flash("Your review has been changed")
-        # get the user, then need to get the id for a redirect
-        user = mongo.db.gamer_id.find_one({"gamer_id": session["gamer"]})
-        return redirect(url_for("account", gamer_id=user['_id']))
+    user = mongo.db.reviews.find({"uploaded_by"})
 
-    reviews = mongo.db.reviews.find_one({"_id": ObjectId(reviews_id)})
-    console = mongo.db.console.find().sort("console_type", 1)
-    categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template(
-        "edit_review.html",
-        reviews=reviews, console=console, categories=categories)
+    if user == session["gamer"]:
+        if request.method == "POST":
+            save = {
+                "console_type": request.form.get("console_type"),
+                "game_name": request.form.get("game_name"),
+                "category_type": request.form.get("category_name"),
+                "review_content": request.form.get("review_content"),
+                "uploaded_by": session["gamer"]
+            }
+            # Update saved to mongoDB
+            mongo.db.reviews.update_one(
+                {"_id": ObjectId(reviews_id)}, {"$set": save})
+            flash("Your review has been changed")
+            # get the user, then need to get the id for a redirect
+            user = mongo.db.gamer_id.find_one({"gamer_id": session["gamer"]})
+            return redirect(url_for("account", gamer_id=user['_id']))
+
+        reviews = mongo.db.reviews.find_one({"_id": ObjectId(reviews_id)})
+        console = mongo.db.console.find().sort("console_type", 1)
+        categories = mongo.db.categories.find().sort("category_name", 1)
+        return render_template(
+            "edit_review.html",
+            reviews=reviews, console=console, categories=categories)
+    else:
+        flash("Your not authorise to edit this review")
+        return redirect(url_for("home"))
 
 
 @app.route("/delete_review/<reviews_id>")

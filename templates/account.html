@@ -9,7 +9,8 @@
     </h1>
 </form>
 
-{% if reviews %}
+<!-- Loop displays review now (bottom content)-->
+{% for r in reviews %}
     <!-- Shows when user HAS reviews -->
 
     <!-- My Reviews -->
@@ -91,6 +92,6 @@
         </div>
     </div>
 
-{% endif %}
+{% endfor %}
 
 {% endblock %}
