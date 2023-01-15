@@ -20,7 +20,7 @@
 
                     <!-- console type (dropdown) -->
                     <div class="input-field col s12 l6">
-                        <select id="console_type" name="console_type" class="icons validate" required>
+                        <select id="console_type" name="console_type" class="icons validate" aria-label="select console" required>
                             <label for="console_type" class="hide">Console Type</label>
                             <option value="" class="left" disabled>Select Console</option>
                             {% for con in console %}
@@ -41,7 +41,7 @@
                 <!-- Category dropdown -->
                 <div class="row">
                     <div class="input-field col s12">
-                        <select id="category_name" name="category_name" class="icons validate" required>
+                        <select id="category_name" name="category_name" class="icons validate" aria-label="select category" required>
                             <label for="review_content" class="hide">Review Content</label>
                             <option value="" class="left" disabled>Select Console</option>
                             {% for category in categories %}
