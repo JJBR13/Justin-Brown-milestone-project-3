@@ -38,10 +38,12 @@ def home():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
-
+    """
+    Allows user to search review content
+    and titles in the database.
+    """
     reviews = list()
     reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
-
     return render_template("reviews.html", reviews=reviews)
 
 
