@@ -234,26 +234,36 @@ def delete_review(reviews_id):
     Enables gamer to delete review, they created.
     Redirects them back to account page.
     """
-    # get the review, delete this after
-    review = mongo.db.reviews.find_one({"_id": ObjectId(reviews_id)})
-    # get the user, we need to get the id for a redirect
-    user = mongo.db.gamer_id.find_one({"gamer_id": session["gamer"]})
+    # If session is active
+    if session.get("gamer"):
+        review = mongo.db.reviews.find_one_or_404(
+            {"_id": ObjectId(reviews_id)})
+        # If session user owns the post
+        if review["uploaded_by"] == session["gamer"]:
+            # get the review, delete this after
+            review = mongo.db.reviews.find_one({"_id": ObjectId(reviews_id)})
+            # get the user, we need to get the id for a redirect
+            user = mongo.db.gamer_id.find_one({"gamer_id": session["gamer"]})
 
-    if review["uploaded_by"] == session["gamer"]:
-        if review:
-            # try to delete review here
-            mongo.db.reviews.delete_one({"_id": ObjectId(reviews_id)})
-            # success message
-            flash("Review Sucessfully Deleted")
-            # redirect
-            return redirect(url_for("account", gamer_id=user['_id']))
+            if review["uploaded_by"] == session["gamer"]:
+                if review:
+                    # try to delete review here
+                    mongo.db.reviews.delete_one({"_id": ObjectId(reviews_id)})
+                    # success message
+                    flash("Review Sucessfully Deleted")
+                    # redirect
+                    return redirect(url_for("account", gamer_id=user['_id']))
+                else:
+                    # review does not exist, redirect to home
+                    flash("This review does not exist")
+                    return redirect(url_for("account", gamer_id=user['_id']))
+        # Displays if logged in as wrong user
         else:
-            # review does not exist, redirect to home
-            flash("This review does not exist")
-            return redirect(url_for("account", gamer_id=user['_id']))
-    else:
-        flash("Your not authorise to DELETE this review")
-        return redirect(url_for("home"))
+            flash("Your logged in as the incorrect user to delete this review")
+            return redirect(url_for("home"))
+    # Displays when no user is logged in
+    flash("Your not authorise to edit this review")
+    return redirect(url_for("home"))
 
 
 @app.route("/contact")
