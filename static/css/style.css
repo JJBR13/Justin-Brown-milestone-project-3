@@ -338,3 +338,11 @@ textarea.materialize-textarea {
         height: 20vh;
     }
 }
+
+/* Tablet */
+
+@media screen and (max-width: 820px) {
+    body {
+        font-size: 15px;
+    }
+}
