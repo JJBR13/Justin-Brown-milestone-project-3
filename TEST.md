@@ -493,7 +493,7 @@ The button removes the modal and redirects the user to their account page.
   - Missing tags 
   - "POST" method in div tags, not for tags
 
-- This was brilliant, to find these issues, however, due to the use of Jinji templating and url_for for href links, duplicate id tage due to looping over data these tests were never completely clear. 
+- This was brilliant, to find these issues, however, due to the use of Jinji templating and url_for for href links, and duplicate id tage due to looping over data these tests were never completely clear. 
 
 ### CSS
 
