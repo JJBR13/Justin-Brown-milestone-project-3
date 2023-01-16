@@ -24,8 +24,8 @@
                         <select id="console_type" name="console_type" class="icons validate" aria-label="select console" required>
                             <option class="op-style" value="" disabled selected>Select Console</option>
                             {% for con in console %}
-                            <option value="{{ con.console_type }}">{{ con.console_type }}
-                            </option>
+                                <option value="{{ con.console_type }}">{{ con.console_type }}
+                                </option>
                             {% endfor %}
                         </select>
                     </div>
@@ -37,9 +37,9 @@
                         <select id="category_name" name="category_name" class="icons validate" aria-label="select category" required>
                             <option class="op-style" value="" disabled selected>Choose Category</option>
                             {% for category in categories %}
-                            <option value="{{ category.category_name }}">
-                                {{- category.category_name -}}
-                            </option>
+                                <option value="{{ category.category_name }}">
+                                    {{- category.category_name -}}
+                                </option>
                             {% endfor %}
                         </select>
                     </div>

@@ -8,7 +8,7 @@ body {
     font-family: 'Gruppo', cursive;
     font-size: 18px;
 }
- 
+
 .header-text {
     font-family: 'Syne Mono', monospace;
     font-size: 55px;
@@ -50,11 +50,11 @@ body {
 }
 
 .shadow {
-    box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .blue-shadow {
-    box-shadow : 0 4px 8px 0 rgb(31, 56, 198), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgb(31, 56, 198), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .no-box-shadow {
@@ -72,17 +72,20 @@ hr {
     margin-right: auto;
     background-color: #5B5C50;
     border: 0 none;
-    box-shadow : 0 4px 8px 0 rgba(91, 92, 80, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(91, 92, 80, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), textarea.materialize-textarea {
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+textarea.materialize-textarea {
     border-bottom: 1px solid red;
     background-color: #E4DCC0;
     border-radius: 5px;
-    box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-::placeholder, label {
+::placeholder,
+label {
     padding: 10px;
 }
 
@@ -101,13 +104,15 @@ input[type=text]:not(.browser-default), input[type=password]:not(.browser-defaul
     font-size: 22px;
 }
 
-.nav-header:hover, .dropdown-content li>a:hover {
+.nav-header:hover,
+.dropdown-content li>a:hover {
     font-size: 22px;
     background-color: rgba(208, 17, 16, 0.6);
 }
 
 
-#header-nav, .page-footer {
+#header-nav,
+.page-footer {
     background-color: #5B5C50;
 }
 
@@ -126,7 +131,8 @@ input[type=text]:not(.browser-default), input[type=password]:not(.browser-defaul
     padding: 14px 16px;
 }
 
-.fa-bars:before, .fa-navicon:before {
+.fa-bars:before,
+.fa-navicon:before {
     color: white;
 }
 
@@ -135,16 +141,18 @@ input[type=text]:not(.browser-default), input[type=password]:not(.browser-defaul
 nav.nav-center ul {
     text-align: center;
 }
+
 nav.nav-center ul li {
     display: inline;
     float: none;
 }
+
 nav.nav-center ul li a {
     display: inline-block;
 }
 
 .hero-container {
-        height: 50vh;
+    height: 50vh;
 }
 
 #home-header {
@@ -156,11 +164,13 @@ nav.nav-center ul li a {
     padding: 20px;
 }
 
-.card-content, div p {
+.card-content,
+div p {
     color: #5B5C50;
 }
 
-div i, .step {
+div i,
+.step {
     font-size: 20px;
     color: #5B5C50;
 }
@@ -169,6 +179,7 @@ div i, .step {
     font-size: 20px;
     font-weight: 300;
 }
+
 /* -------------------------------------- Footer*/
 
 #footer-logo {
@@ -183,35 +194,42 @@ div i, .step {
 
 /* ------------------------------------- Submit btn form */
 
-input::placeholder, .input-field>label {
+input::placeholder,
+.input-field>label {
     color: black;
     font-family: 'Gruppo', cursive;
     font-size: 18px;
     font-weight: bold;
 }
 
-.sub-btn, #back-btn, #review-now,
-.search-btn, .reset-btn:hover {
+.sub-btn,
+#back-btn,
+#review-now,
+.search-btn,
+.reset-btn:hover {
     background-color: rgba(70, 68, 68, 0.85);
     filter: brightness(130%);
-    box-shadow : 0 4px 8px 0 rgb(31, 56, 198), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgb(31, 56, 198), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.sub-btn:hover, #back-btn:hover, #review-now:hover,
-.search-btn:hover, .reset-btn {
+.sub-btn:hover,
+#back-btn:hover,
+#review-now:hover,
+.search-btn:hover,
+.reset-btn {
     background-color: rgba(40, 39, 39, 0.85);
     filter: brightness(130%);
-    box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
-/* -------------------------------------- flash messages */ 
+/* -------------------------------------- flash messages */
 
 .flash-container {
     max-width: 300px;
     padding: 10px;
     background-color: #C2AD90;
-    box-shadow : 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* ---------------------------------------------- Review page */
@@ -223,7 +241,7 @@ input::placeholder, .input-field>label {
 }
 
 nav {
-    background-color: rgba(255,255,255, 0);
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .review-sub {
@@ -251,11 +269,12 @@ nav {
     color: white;
 }
 
-#query, #contact-name {
+#query,
+#contact-name {
     background-color: whitesmoke;
     border: grey;
     border-radius: 25px;
-    box-shadow: 0 4px 8px 0 rgb(31, 56, 198,1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgb(31, 56, 198, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .cat-margin {
@@ -283,13 +302,16 @@ nav {
     margin: 4px;
 }
 
-.edit-btn, .save-btn, #top-btn:hover {
+.edit-btn,
+.save-btn,
+#top-btn:hover {
     background-color: rgba(128, 128, 128, 0.85);
-    box-shadow: 0 4px 8px 0 rgb(31, 56, 198,1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgb(31, 56, 198, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     filter: brightness(130%);
 }
 
-.edit-btn:hover, .save-btn:hover {
+.edit-btn:hover,
+.save-btn:hover {
     background-color: rgba(128, 128, 128, 0.85);
     filter: brightness(130%);
 }
@@ -299,7 +321,8 @@ nav {
     filter: brightness(130%);
 }
 
-.cancel-btn:hover, .delete-btn:hover {
+.cancel-btn:hover,
+.delete-btn:hover {
     filter: brightness(130%);
     background-color: #5B5C50;
     box-shadow: 0 4px 8px 0 rgba(208, 17, 16, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -351,6 +374,8 @@ textarea.materialize-textarea {
         font-size: 15px;
     }
 }
+
+/* 15" laptop screen */ 
 
 @media screen and (min-width: 1440px) {
     .card.medium {
