@@ -191,7 +191,8 @@ def edit_review(reviews_id):
     """
     # If session is active
     if session.get("gamer"):
-        review = mongo.db.reviews_id.find_one({"_id": ObjectId(reviews_id)})
+        review = mongo.db.reviews.find_one_or_404(
+            {"_id": ObjectId(reviews_id)})
         # If session user owns the post
         if review["uploaded_by"] == session["gamer"]:
             if request.method == "POST":
@@ -218,9 +219,11 @@ def edit_review(reviews_id):
                 "edit_review.html",
                 reviews=reviews, console=console, categories=categories)
         else:
-            flash("Im new")
+            # Displays if user is loggged in but as wrong user.
+            flash(
+                "Your logged in as the incorrect user to edit this review")
             return redirect(url_for("home"))
-
+    # Displays when no user is logged in
     flash("Your not authorise to edit this review")
     return redirect(url_for("home"))
 
