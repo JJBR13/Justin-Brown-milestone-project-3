@@ -608,4 +608,16 @@ The button removes the modal and redirects the user to their account page.
 
   - This was fixed by wrapping the variable value in a list, targeting the review in on jinja if statement and the button in another if statement using the length function. 
 
+### i) 
+
+- Issue with creating defensive statements for edit and delete functions, to stop other users ediditng and deleting review through _id key in MongoDB
+
+  - This was fixed with adding in two if statements and using the .get() with parameters of gamer. This then allowed the function to check the session variable correctly. 
+
+### j) 
+
+- Information cards on index.html not being full responsive of different desktop screen sizes. 
+
+  - This was fixed by relising that Materialse had card helpers small, medium and large. Then adding relavent media queries to create desired outcome.
+
 Back to [README.md](/README.md)
